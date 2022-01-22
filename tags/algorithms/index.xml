@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>algorithms on Hafiz Tsalavin</title>
-    <link>https://hafiztsalavin.com/tags/algorithms/</link>
+    <link>https://hafiztsalavin.github.io/tags/algorithms/</link>
     <description>Recent content in algorithms on Hafiz Tsalavin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://hafiztsalavin.com/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hafiztsalavin.github.io/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Talking about Big O Notation</title>
-      <link>https://hafiztsalavin.com/posts/2021/10/talking-about-big-o-notation/</link>
+      <link>https://hafiztsalavin.github.io/posts/2021/10/talking-about-big-o-notation/</link>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.com/posts/2021/10/talking-about-big-o-notation/</guid>
+      <guid>https://hafiztsalavin.github.io/posts/2021/10/talking-about-big-o-notation/</guid>
       <description>Hello everyone ! After few week ago break to writing a blog and trying to re-learn about Data Structures and Algorithms, here I would like to share one thing that I think is important to how analysis performance some algorithms, ya Big-O notation (read with an O, not a zero). Honestly, there are so many method to analyze performance some algorithm, but here I only share the most method that we usually use to analyze an algorithm.</description>
     </item>
     

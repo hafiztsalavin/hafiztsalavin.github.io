@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hafiz Tsalavin</title>
-    <link>https://hafiztsalavin.com/tags/</link>
+    <link>https://hafiztsalavin.github.io/tags/</link>
     <description>Recent content in Tags on Hafiz Tsalavin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://hafiztsalavin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hafiztsalavin.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>algorithms</title>
-      <link>https://hafiztsalavin.com/tags/algorithms/</link>
+      <link>https://hafiztsalavin.github.io/tags/algorithms/</link>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.com/tags/algorithms/</guid>
+      <guid>https://hafiztsalavin.github.io/tags/algorithms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data structure</title>
-      <link>https://hafiztsalavin.com/tags/data-structure/</link>
+      <link>https://hafiztsalavin.github.io/tags/data-structure/</link>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.com/tags/data-structure/</guid>
+      <guid>https://hafiztsalavin.github.io/tags/data-structure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>learning</title>
-      <link>https://hafiztsalavin.com/tags/learning/</link>
+      <link>https://hafiztsalavin.github.io/tags/learning/</link>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.com/tags/learning/</guid>
+      <guid>https://hafiztsalavin.github.io/tags/learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>bootcamp</title>
-      <link>https://hafiztsalavin.com/tags/bootcamp/</link>
+      <link>https://hafiztsalavin.github.io/tags/bootcamp/</link>
       <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.com/tags/bootcamp/</guid>
+      <guid>https://hafiztsalavin.github.io/tags/bootcamp/</guid>
       <description></description>
     </item>
     
