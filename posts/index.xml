@@ -165,7 +165,7 @@ print_all(arr)
             
             <guid>https://hafiztsalavin.space/posts/2021/08/final-reflection-i-am-growth/</guid>
             <description>Hello everyone ! From the title of this post, ya this is my last reflection on Intermediate Phase GenerasiGIGIH. Technical class is over. There are many things that I got this phase. Unfortunately, in the last week my condition is drop. I cannot continuing my final project and cannot attend in technical class also english class due to my doctor suggest me to totally bed rest. But, I&amp;rsquo;ll finished the project out of the time.</description>
-            <content type="html"><![CDATA[<p><img src="https://hafiztsalavin.space/img/images/yabbb.png" alt="image"></p>
+            <content type="html"><![CDATA[<!-- raw HTML omitted -->
 <h3 id="hello-everyone-">Hello everyone !</h3>
 <p>From the title of this post, ya this is my last reflection on Intermediate Phase GenerasiGIGIH. Technical class is over. There are many things that I got this phase. Unfortunately, in the last week my condition is drop. I cannot continuing my final project and cannot attend in technical class also english class due to my doctor suggest me to totally bed rest. But, I&rsquo;ll finished the project out of the time. I am very grateful for everything I had in GenerasiGIGIH.</p>
 <h3 id="for-my-progress-in-backend-engineering-is-">For my progress in backend engineering is &hellip;</h3>
@@ -271,7 +271,7 @@ So, for this weekly reflection here, i have to answer questions from my peers on
 Do you become more confident to become what you aspire to be after joining GenerasiGIGIH? To be honest, after joining GenerasiGIGIH make me confident also motivated. So many instructors that inspired me actually.</description>
             <content type="html"><![CDATA[<h3 id="hello-everyone-">Hello everyone !</h3>
 <p>See what i got from Gojek and YABB. Amazing.</p>
-<p><img src="https://hafiztsalavin.space/img/images/packet.jpeg" alt="packet"></p>
+<!-- raw HTML omitted -->
 <p>So, for this weekly reflection here, i have to answer questions from my peers on Generasi GIGIH and i will be chosen question from them. So&hellip;</p>
 <h3 id="do-you-become-more-confident-to-become-what-you-aspire-to-be-after-joining-generasigigih">Do you become more confident to become what you aspire to be after joining GenerasiGIGIH?</h3>
 <p>To be honest, after joining GenerasiGIGIH make me confident also motivated. So many instructors that inspired me actually. I was to learn that fundamental and basic is more important. Invest in fundamental is best way to keep survive in era digital, right?. So many that can I improve from soft skill to hard skill, made me realize that there are still many things that I can explore, as it be technical or non-technical material. But if the fundamental not strong, all of them hard to knowing.</p>
@@ -346,7 +346,7 @@ What exactly is Ansible ? Actually, ansible is an open source software that auto
             <guid>https://hafiztsalavin.space/posts/2021/08/5th-weekly-reflection/</guid>
             <description>Hello everyone ! Unbelievable that only 2 weeks left in intermediate phase. Many things have happened in this one week, chaos in infrastructure especially. I didn’t expect that at the class would be chaos, but I learned many things that I was write summarize it in previous blog.
 So, how do I feel about the board? To be honest, when the score announced, its actually beyond my expectation. My expectation is like &amp;ldquo;ya maybe my position around 200th&amp;rdquo; and what just happen?</description>
-            <content type="html"><![CDATA[<p><img src="https://hafiztsalavin.space/img/images/yabbb.png" alt="image"></p>
+            <content type="html"><![CDATA[<!-- raw HTML omitted -->
 <h3 id="hello-everyone-">Hello everyone !</h3>
 <p>Unbelievable that only 2 weeks left in intermediate phase.  Many things have happened in this one week, chaos in infrastructure especially. I didn’t expect that at the class would be chaos, but I learned many things that I was write summarize it in previous blog.</p>
 <h3 id="so-how-do-i-feel-about-the-board">So, how do I feel about the board?</h3>
@@ -449,7 +449,7 @@ end
             <guid>https://hafiztsalavin.space/posts/2021/08/4th-weekly-reflection/</guid>
             <description>Hello everyone ! Well, I have been studying in this program for fourth weeks. So much things i get from this program, not only technical but also in English skill especially. I feel growth in fourth weeks, so much improve in terms of hard skill or soft skill. So grateful.
 I can describe actual what happened to me during the program with natural events is like rainbow after thunderstorm in the night.</description>
-            <content type="html"><![CDATA[<p><img src="https://hafiztsalavin.space/img/images/yabbb.png" alt="image"></p>
+            <content type="html"><![CDATA[<!-- raw HTML omitted -->
 <h3 id="hello-everyone-">Hello everyone !</h3>
 <p>Well, I have been studying in this program for fourth weeks. So much things i get from this program, not only technical but also in English skill especially. I feel growth in fourth weeks, so much improve in terms of hard skill or soft skill. So grateful.</p>
 <p>I can describe actual what happened to me during the program with natural events is like rainbow after thunderstorm in the night. I think is good to imagine what happened to me. Thunderstorm describe to many things I that have to learn and surprise due to so many new things that I have never learned before and rainbow is describe results that what i get from this program.</p>
@@ -487,7 +487,7 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
 <p>After the test is success, we dont need to continue the code, instead we proceed to make the next failing test.</p>
 <h3 id="cycle-of-tdd">Cycle of TDD</h3>
 <p>To make easy, lets imagine the cycle of TDD. When you are doing TDD, just looked the cycle.</p>
-<p><img src="https://hafiztsalavin.space/img/images/tdd/rgb.png" alt="image"></p>
+<!-- raw HTML omitted -->
 <ul>
 <li>First is write test code to make it fail</li>
 <li>Second, just writing code to make that test work.</li>
@@ -510,7 +510,7 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
     <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>Run <code>rspec</code> and the test is failing.</p>
-<p><img src="https://hafiztsalavin.space/img/images/tdd/3.png" alt="image"></p>
+<!-- raw HTML omitted -->
 <p>Message error <code>uninitialized constant Stack</code>, they tell us that Stack class not defined.</p>
 <h3 id="pass-test">Pass Test</h3>
 <p>Now, start writing code and try to pass that test. Just enough to make that test pass. Not more code.</p>
@@ -524,7 +524,7 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
     <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>And than run it again. Don&rsquo;t forget to commit after pass the test to see what we have to pass the test.</p>
-<p><img src="https://hafiztsalavin.space/img/images/tdd/2.png" alt="image"></p>
+<!-- raw HTML omitted -->
 <p>Yeay cool.</p>
 <h3 id="repeat-the-process-for-the-next-unit-tes">Repeat the process for the next unit tes</h3>
 <p>We remember that stack have push after we can read it. Lets make the test that we push 1 and read it.</p>
@@ -541,7 +541,7 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
     <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>Run with <code>rspec -fd</code> and we can see message error like this:</p>
-<p><img src="https://hafiztsalavin.space/img/images/tdd/4.png" alt="image"></p>
+<!-- raw HTML omitted -->
 <p>With <code>rpech -fd</code>, we can see that the first test is pass but second test is failing.</p>
 <h3 id="pass-test-1">Pass Test</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Stack</span>
@@ -558,7 +558,7 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
     <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>And than run it again, don&rsquo;t forget to commit and the output should be like this:</p>
-<p><img src="https://hafiztsalavin.space/img/images/tdd/5.png" alt="image"></p>
+<!-- raw HTML omitted -->
 <p>Yessss, GREEN!</p>
 <p>The last that stack can remove stack with pop method. Let&rsquo;s adding the test with pop.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">RSpec</span><span style="color:#f92672">.</span>describe <span style="color:#66d9ef">Stack</span> <span style="color:#66d9ef">do</span>
@@ -580,7 +580,7 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
     <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>Run it and make sure the test is failing.</p>
-<p><img src="https://hafiztsalavin.space/img/images/tdd/7.png" alt="image"></p>
+<!-- raw HTML omitted -->
 <h3 id="pass-test-2">Pass Test</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Stack</span>
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>
@@ -600,9 +600,9 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
     <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>Run rspec again we will see our all test cases working fine and everything is green.</p>
-<p><img src="https://hafiztsalavin.space/img/images/tdd/8.png" alt="image"></p>
+<!-- raw HTML omitted -->
 <p>You can install <code>tig</code> to look into recent change logs when writing test or writing code to pass it. So, you can check other commits without running the command many times.</p>
-<p><img src="https://hafiztsalavin.space/img/images/tdd/9.png" alt="image"></p>
+<!-- raw HTML omitted -->
 <p>That’s it what can i share. Yess of course, this is only short introduction of TDD. Hopefully this helped you to introduction to what the TDD process is like.<br>
 Thank you !!!</p>
 ]]></content>
@@ -649,11 +649,11 @@ So, first of all, we need library that we will use to testing. Just open your te
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>GIVEN a context, WHEN some condition and THEN expect some output.
 Lets run with <code>rspec spec/&lt;filename&gt;_spec.rb</code> and the output should be like this:</p>
-<p><img src="https://hafiztsalavin.space/img/images/unit_testing/1.png" alt="image "></p>
+<!-- raw HTML omitted -->
 <p>If you looked what is the error message, Rspec tell us the error is very specific. <code>uninitialized constant Martabak</code>, the error tell we that we dont have Martabak class and lets make a Martabak class and run test again.</p>
-<p><img src="https://hafiztsalavin.space/img/images/unit_testing/2.png" alt="image">
-You can look the messages error, very clearly and specific. Lest complete the test with add an initialize method to our Martabak class that takes in a taste.</p>
-<p><img src="https://hafiztsalavin.space/img/images/unit_testing/3.png" alt="image"></p>
+<!-- raw HTML omitted -->
+<p>You can look the messages error, very clearly and specific. Lest complete the test with add an initialize method to our Martabak class that takes in a taste.</p>
+<!-- raw HTML omitted -->
 <p>Cool, that pass and now the color changed to green. Its mean the code is pass from the test. And the code of implementation is:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Martabak</span>
     <span style="color:#66d9ef">attr_reader</span> <span style="color:#e6db74">:topping</span>
@@ -793,7 +793,7 @@ export DB_PASSWORD=
             <guid>https://hafiztsalavin.space/posts/2021/07/2nd-weekly-reflection/</guid>
             <description>Hello everyone ! Well, second week is passed. I have completed my second week in Generasi Gigih with Back-end track.
 So, in the technical class, we learned about HTTP method, how to use Ruby Sinatra Routing and Rendering, Databases with ERD, how to design an ERD and how to manipulation. Actually, I knew the subject during studied in college, exclude Ruby Sinatra because I haven’t touch Ruby at all before joined the program.</description>
-            <content type="html"><![CDATA[<p><img src="https://hafiztsalavin.space/img/images/ggbanner.png" alt="image"></p>
+            <content type="html"><![CDATA[<!-- raw HTML omitted -->
 <h3 id="hello-everyone-">Hello everyone !</h3>
 <p>Well, second week is passed. I have completed my second week in Generasi Gigih with Back-end track.</p>
 <p>So, in the technical class, we learned about HTTP method, how to use Ruby Sinatra Routing and Rendering, Databases with ERD, how to design an ERD and how to manipulation. Actually, I knew the subject during studied in college, exclude Ruby Sinatra because I haven’t touch Ruby at all before joined the program. But, even I already know the subject, I always excited to learned again and know some new things more deep that I have never learned before. Its makes me feels to stay foolish and hungry to learn more and more.</p>
@@ -858,7 +858,7 @@ For example:</p>
             
             <guid>https://hafiztsalavin.space/posts/2021/07/1st-weekly-reflection/</guid>
             <description>Hello everyone ! First weeks is done. My feels like afraid and excited at the same time. Afraid because I afraid if I not able to keep up with the lesson and excited because the curriculum is very good and interesting. But to be honest, I am little bit nervous in english class. There are so many people fluent in english. For me as a beginner in english, I have learned a lot like how to speak daily conversation and little bit about grammar, so grateful.</description>
-            <content type="html"><![CDATA[<p><img src="https://hafiztsalavin.space/img/images/ggbanner.png" alt="image"></p>
+            <content type="html"><![CDATA[<!-- raw HTML omitted -->
 <h3 id="hello-everyone-">Hello everyone !</h3>
 <p>First weeks is done. My feels like afraid and excited at the same time. Afraid because I afraid if I not able to keep up with the lesson and excited because the curriculum is very good and interesting. But to be honest, I am little bit nervous in english class. There are so many people fluent in english. For me as a beginner in english, I have learned a lot like how to speak daily conversation and little bit about grammar, so grateful.</p>
 <p>Anyway, at the technical class, we learn about Object Oriented Programming or OOP with Ruby. Obviously we use Ruby for the main programming languages in this bootcamp. So far the materials I have got in the college but not deep.  I think it will be quiet clear to me to able understand the materials when I heard the explanations from the instructors. But to be honest, I have learned a lot of new things from the materials. A lot of materials that I had never known before.</p>
@@ -874,7 +874,7 @@ For example:</p>
             
             <guid>https://hafiztsalavin.space/posts/2021/07/intermediate-level-generasi-gigih/</guid>
             <description>Hello everyone ! Since May 11 2021, I have been accepted as a participants at Generasi Gigih – Back End Engineeer Path from Yayasan Anak Bangsa Bisa. And today I was receive email from generasi gigih that I moving to the next round of generasi gigih program which is the intermediate level. I was very happy because in the intermediate level we will learn more deeper about concepts and fundamentals about backend engineering from engineer gojek, directly.</description>
-            <content type="html"><![CDATA[<p><img src="https://hafiztsalavin.space/img/images/yabb.jpeg" alt="image"></p>
+            <content type="html"><![CDATA[<!-- raw HTML omitted -->
 <h3 id="hello-everyone-">Hello everyone !</h3>
 <p>Since May 11 2021, I have been accepted as a participants at Generasi Gigih – Back End Engineeer Path from Yayasan Anak Bangsa Bisa. And today I was receive email from generasi gigih that I moving to the next round of generasi gigih program which is the intermediate level. I was very happy because in the intermediate level we will learn more deeper about concepts and fundamentals about backend engineering from engineer gojek, directly.  Amazing. The intermediate phase starts on Monday 5 July 2021.</p>
 <p>So first of all, I’ll explain what is Generasi Gigih by Yayasan Anak Bangsa Bisa.  Yayasan Anak Bangsa Bisa is a non-profit organization founded by Gojek. YABB is committed to help society build back better. And Generasi Gigih is a bootcamp that was designed as a breakthrough for Indonesia’s young tech talent to catch up with the fast-paced tech industry with the right skill and mindset. I picked the Backend Engineer track and I learn fundamental of backend engineering with Ruby.</p>
