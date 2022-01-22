@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>learning on Hafiz Tsalavin</title>
-    <link>https://hafiztsalavin.space/tags/learning/</link>
+    <link>https://hafiztsalavin.com/tags/learning/</link>
     <description>Recent content in learning on Hafiz Tsalavin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://hafiztsalavin.space/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hafiztsalavin.com/tags/learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Talking about Big O Notation</title>
-      <link>https://hafiztsalavin.space/posts/2021/10/talking-about-big-o-notation/</link>
+      <link>https://hafiztsalavin.com/posts/2021/10/talking-about-big-o-notation/</link>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/10/talking-about-big-o-notation/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/10/talking-about-big-o-notation/</guid>
       <description>Hello everyone ! After few week ago break to writing a blog and trying to re-learn about Data Structures and Algorithms, here I would like to share one thing that I think is important to how analysis performance some algorithms, ya Big-O notation (read with an O, not a zero). Honestly, there are so many method to analyze performance some algorithm, but here I only share the most method that we usually use to analyze an algorithm.</description>
     </item>
     
     <item>
       <title>Final Reflection: I AM GROWTH</title>
-      <link>https://hafiztsalavin.space/posts/2021/08/final-reflection-i-am-growth/</link>
+      <link>https://hafiztsalavin.com/posts/2021/08/final-reflection-i-am-growth/</link>
       <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/08/final-reflection-i-am-growth/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/08/final-reflection-i-am-growth/</guid>
       <description>Hello everyone ! From the title of this post, ya this is my last reflection on Intermediate Phase GenerasiGIGIH. Technical class is over. There are many things that I got this phase. Unfortunately, in the last week my condition is drop. I cannot continuing my final project and cannot attend in technical class also english class due to my doctor suggest me to totally bed rest. But, I&amp;rsquo;ll finished the project out of the time.</description>
     </item>
     
     <item>
       <title>Clean code</title>
-      <link>https://hafiztsalavin.space/posts/2021/08/clean-code/</link>
+      <link>https://hafiztsalavin.com/posts/2021/08/clean-code/</link>
       <pubDate>Wed, 18 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/08/clean-code/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/08/clean-code/</guid>
       <description>Hello everyone ! This week, I have been studying about clean code. Honestly, i haven&amp;rsquo;t implemented it but i&amp;rsquo;ll implement it to my next code and always implement it. Oh ya, in here i only summarised some key things and found some useful tips so, if you found something wrong, just contact me hehe.
 Actually, the topic is so famous among software engineer. &amp;ldquo;And the most important book that should be read or anyone who wants to be a good software developer is Clean Code by Uncle Bob&amp;rdquo;, said mas Iqbal and mas Arief as instructor in technical class.</description>
     </item>
     
     <item>
       <title>6th Weekly Reflection</title>
-      <link>https://hafiztsalavin.space/posts/2021/08/6th-weekly-reflection/</link>
+      <link>https://hafiztsalavin.com/posts/2021/08/6th-weekly-reflection/</link>
       <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/08/6th-weekly-reflection/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/08/6th-weekly-reflection/</guid>
       <description>Hello everyone ! See what i got from Gojek and YABB. Amazing.
 So, for this weekly reflection here, i have to answer questions from my peers on Generasi GIGIH and i will be chosen question from them. So&amp;hellip;
 Do you become more confident to become what you aspire to be after joining GenerasiGIGIH? To be honest, after joining GenerasiGIGIH make me confident also motivated. So many instructors that inspired me actually.</description>
@@ -52,60 +52,60 @@ Do you become more confident to become what you aspire to be after joining Gener
     
     <item>
       <title>Automated with Ansible</title>
-      <link>https://hafiztsalavin.space/posts/2021/08/automated-with-ansible/</link>
+      <link>https://hafiztsalavin.com/posts/2021/08/automated-with-ansible/</link>
       <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/08/automated-with-ansible/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/08/automated-with-ansible/</guid>
       <description>Hello everyone ! In previous blog, I was share automation to the configuration virtual environment but we have spent time to do manual installation. So, to automation deployment we need Ansible to help us to do automation.
 What exactly is Ansible ? Actually, ansible is an open source software that automates software provisioning, configuration management, and application deployment. We will use ansible playbook to automate deployment. An ansible playbook is like blueprint that can automation task to send commands to remote computer in a scripted way.</description>
     </item>
     
     <item>
       <title>5th Weekly Reflection</title>
-      <link>https://hafiztsalavin.space/posts/2021/08/5th-weekly-reflection/</link>
+      <link>https://hafiztsalavin.com/posts/2021/08/5th-weekly-reflection/</link>
       <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/08/5th-weekly-reflection/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/08/5th-weekly-reflection/</guid>
       <description>Hello everyone ! Unbelievable that only 2 weeks left in intermediate phase. Many things have happened in this one week, chaos in infrastructure especially. I didn’t expect that at the class would be chaos, but I learned many things that I was write summarize it in previous blog.
 So, how do I feel about the board? To be honest, when the score announced, its actually beyond my expectation. My expectation is like &amp;ldquo;ya maybe my position around 200th&amp;rdquo; and what just happen?</description>
     </item>
     
     <item>
       <title>Deployment using Vagrant</title>
-      <link>https://hafiztsalavin.space/posts/2021/08/deployment-using-vagrant/</link>
+      <link>https://hafiztsalavin.com/posts/2021/08/deployment-using-vagrant/</link>
       <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/08/deployment-using-vagrant/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/08/deployment-using-vagrant/</guid>
       <description>Hello everyone ! Today I’ll share what I have learned something new in world-deployment like how to quickly set up a local development environment. Yess using vagrant, hearing something weird?
 What’s vagrant? Actually, vagrant is tool that makes easy to build and share virtual environment that in normally its take time and effort to configure it one by one. With vagrant makes everything looks like automate by describing the virtual environment setting in the configuration file called Vagrantfile.</description>
     </item>
     
     <item>
       <title>4th Weekly Reflection</title>
-      <link>https://hafiztsalavin.space/posts/2021/08/4th-weekly-reflection/</link>
+      <link>https://hafiztsalavin.com/posts/2021/08/4th-weekly-reflection/</link>
       <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/08/4th-weekly-reflection/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/08/4th-weekly-reflection/</guid>
       <description>Hello everyone ! Well, I have been studying in this program for fourth weeks. So much things i get from this program, not only technical but also in English skill especially. I feel growth in fourth weeks, so much improve in terms of hard skill or soft skill. So grateful.
 I can describe actual what happened to me during the program with natural events is like rainbow after thunderstorm in the night.</description>
     </item>
     
     <item>
       <title>Test Driven Development</title>
-      <link>https://hafiztsalavin.space/posts/2021/07/test-driven-development/</link>
+      <link>https://hafiztsalavin.com/posts/2021/07/test-driven-development/</link>
       <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/07/test-driven-development/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/07/test-driven-development/</guid>
       <description>Hello everyone ! Something new for me to learn this topic. I have never practiced or tried it out but I have to try to summarize it because this is intersting for me. So, what is TDD?
 TDD is acronym of Test Driven Development, basically is a development strategy in which you write unit test first before actually implementing the code because our code development is driven by test like the name, Test Driven.</description>
     </item>
     
     <item>
       <title>Unit Testing with RSpec</title>
-      <link>https://hafiztsalavin.space/posts/2021/07/unit-testing-with-rspec/</link>
+      <link>https://hafiztsalavin.com/posts/2021/07/unit-testing-with-rspec/</link>
       <pubDate>Thu, 29 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/07/unit-testing-with-rspec/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/07/unit-testing-with-rspec/</guid>
       <description>Hello everyone ! This week, I have been studying unit testing. Maybe you wondering, what is unit testing?
 Actually, unit testing is one of type of Automated Test such as Integration Test and Performance Test. An automated test is separated program that executes components of your main program, and verifies behave as expected.
 Automated test will save a lot of time since we dont need to test the program behavior form A to Z manually.</description>
@@ -113,57 +113,57 @@ Automated test will save a lot of time since we dont need to test the program be
     
     <item>
       <title>MVC using Ruby Sinatra</title>
-      <link>https://hafiztsalavin.space/posts/2021/07/mvc-using-ruby-sinatra/</link>
+      <link>https://hafiztsalavin.com/posts/2021/07/mvc-using-ruby-sinatra/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/07/mvc-using-ruby-sinatra/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/07/mvc-using-ruby-sinatra/</guid>
       <description>Hello everyone ! This week, I have been studying about one of most favorite design pattern, MVC, with Ruby Sinatra obviously. Actually, Ruby Sinatra doesn’t require to follow Model-View-Controller (MVC) design pattern for application what we will build, but building a MVC application with Sinatra can help learn how to pieces – models, view and controllers – work together. It was exciting and I want to share what I learned.</description>
     </item>
     
     <item>
       <title>2nd Weekly Reflection</title>
-      <link>https://hafiztsalavin.space/posts/2021/07/2nd-weekly-reflection/</link>
+      <link>https://hafiztsalavin.com/posts/2021/07/2nd-weekly-reflection/</link>
       <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/07/2nd-weekly-reflection/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/07/2nd-weekly-reflection/</guid>
       <description>Hello everyone ! Well, second week is passed. I have completed my second week in Generasi Gigih with Back-end track.
 So, in the technical class, we learned about HTTP method, how to use Ruby Sinatra Routing and Rendering, Databases with ERD, how to design an ERD and how to manipulation. Actually, I knew the subject during studied in college, exclude Ruby Sinatra because I haven’t touch Ruby at all before joined the program.</description>
     </item>
     
     <item>
       <title>Ruby Sinatra and Routes</title>
-      <link>https://hafiztsalavin.space/posts/2021/07/ruby-sinatra-and-routes/</link>
+      <link>https://hafiztsalavin.com/posts/2021/07/ruby-sinatra-and-routes/</link>
       <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/07/ruby-sinatra-and-routes/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/07/ruby-sinatra-and-routes/</guid>
       <description>Hello everyone ! In this blog I want to share basic routes with Ruby Sinatra. Last weeks I have been studying Sinatra, so first question is &amp;hellip;
 What is Ruby Sinatra??? First of all, sinatra is a free and open source software web application library and domain-specific language written in Ruby. It is an alternative to other Ruby web application frameworks such as Ruby on Rails. And web service can be made from sinatra.</description>
     </item>
     
     <item>
       <title>1st Weekly Reflection</title>
-      <link>https://hafiztsalavin.space/posts/2021/07/1st-weekly-reflection/</link>
+      <link>https://hafiztsalavin.com/posts/2021/07/1st-weekly-reflection/</link>
       <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/07/1st-weekly-reflection/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/07/1st-weekly-reflection/</guid>
       <description>Hello everyone ! First weeks is done. My feels like afraid and excited at the same time. Afraid because I afraid if I not able to keep up with the lesson and excited because the curriculum is very good and interesting. But to be honest, I am little bit nervous in english class. There are so many people fluent in english. For me as a beginner in english, I have learned a lot like how to speak daily conversation and little bit about grammar, so grateful.</description>
     </item>
     
     <item>
       <title>Intermediate Level Generasi Gigih</title>
-      <link>https://hafiztsalavin.space/posts/2021/07/intermediate-level-generasi-gigih/</link>
+      <link>https://hafiztsalavin.com/posts/2021/07/intermediate-level-generasi-gigih/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/07/intermediate-level-generasi-gigih/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/07/intermediate-level-generasi-gigih/</guid>
       <description>Hello everyone ! Since May 11 2021, I have been accepted as a participants at Generasi Gigih – Back End Engineeer Path from Yayasan Anak Bangsa Bisa. And today I was receive email from generasi gigih that I moving to the next round of generasi gigih program which is the intermediate level. I was very happy because in the intermediate level we will learn more deeper about concepts and fundamentals about backend engineering from engineer gojek, directly.</description>
     </item>
     
     <item>
       <title>Introduction my blog</title>
-      <link>https://hafiztsalavin.space/posts/2021/04/introduction-my-blog/</link>
+      <link>https://hafiztsalavin.com/posts/2021/04/introduction-my-blog/</link>
       <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.space/posts/2021/04/introduction-my-blog/</guid>
+      <guid>https://hafiztsalavin.com/posts/2021/04/introduction-my-blog/</guid>
       <description>Hello everyone ! This is my first blog. I realize I’m years late to the game. I finally now have time to write about stuff.
 My purpose why I build blog is to share about what I have been working on, what I have learned, things I have found interesting, insights into how I make and maintain my projects, etc.
 Also, my blog is my media to learn how to write in english correctly, so if find something missing in my post, please don’t be hesitate to contact me.</description>
