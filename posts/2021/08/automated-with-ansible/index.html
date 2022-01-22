@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="map[name:Hafiz Tsalavin]">
+<meta name="description" content="Hello everyone ! In previous blog, I was share automation to the configuration virtual environment but we have spent time to do manual installation. So, to automation deployment we need Ansible to help us to do automation.
+What exactly is Ansible ? Actually, ansible is an open source software that automates software provisioning, configuration management, and application deployment. We will use ansible playbook to automate deployment. An ansible playbook is like blueprint that can automation task to send commands to remote computer in a scripted way." />
+<meta name="keywords" content=", learning, bootcamp" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://hafiztsalavin.space/posts/2021/08/automated-with-ansible/" />
+
+
+    <title>
+        
+            Automated with Ansible :: Hafiz Tsalavin 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://hafiztsalavin.space/main.aaa4299e94595dfb127122d343244362acc9c8619cdf790b520723c2c8071d90.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://hafiztsalavin.space/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://hafiztsalavin.space/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://hafiztsalavin.space/favicon-16x16.png">
+    <link rel="manifest" href="https://hafiztsalavin.space/site.webmanifest">
+    <link rel="mask-icon" href="https://hafiztsalavin.space/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="https://hafiztsalavin.space/favicon.ico">
+    <meta name="msapplication-TileColor" content="#1b1c1d">
+    <meta name="theme-color" content="#1b1c1d">
+
+
+
+<meta itemprop="name" content="Automated with Ansible">
+<meta itemprop="description" content="Hello everyone ! In previous blog, I was share automation to the configuration virtual environment but we have spent time to do manual installation. So, to automation deployment we need Ansible to help us to do automation.
+What exactly is Ansible ? Actually, ansible is an open source software that automates software provisioning, configuration management, and application deployment. We will use ansible playbook to automate deployment. An ansible playbook is like blueprint that can automation task to send commands to remote computer in a scripted way.">
+<meta itemprop="datePublished" content="2021-08-10T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-08-10T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="341">
+<meta itemprop="image" content="https://hafiztsalavin.space/"/>
+
+
+
+<meta itemprop="keywords" content="learning,bootcamp," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hafiztsalavin.space/"/>
+
+<meta name="twitter:title" content="Automated with Ansible"/>
+<meta name="twitter:description" content="Hello everyone ! In previous blog, I was share automation to the configuration virtual environment but we have spent time to do manual installation. So, to automation deployment we need Ansible to help us to do automation.
+What exactly is Ansible ? Actually, ansible is an open source software that automates software provisioning, configuration management, and application deployment. We will use ansible playbook to automate deployment. An ansible playbook is like blueprint that can automation task to send commands to remote computer in a scripted way."/>
+
+
+
+
+
+
+    <meta property="article:section" content="Development" />
+
+
+
+    <meta property="article:published_time" content="2021-08-10 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://hafiztsalavin.space/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text">_ cd /hafiztsalavin/</span>
+            <span class="logo__cursor" style=
+                  "visibility:hidden;
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://hafiztsalavin.space/about/">About</a></li><li><a href="https://hafiztsalavin.space/posts/">All Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+
+<div>
+  
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        2 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://hafiztsalavin.space/posts/2021/08/automated-with-ansible/">Automated with Ansible</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div style="text-align: justify;" class="post-content">
+        <h3 id="hello-everyone-">Hello everyone !</h3>
+<p>In previous blog, I was share automation to the configuration virtual environment but we have spent time to do manual installation. So, to automation deployment we need Ansible to help us to do automation.</p>
+<h3 id="what-exactly-is-ansible-">What exactly is Ansible ?</h3>
+<p>Actually, ansible is an open source software that automates software provisioning, configuration management, and application deployment. We will use ansible playbook to automate deployment. An ansible playbook is like blueprint that can automation task to send commands to remote computer in a scripted way. Normally, ansible uses YAML for playbook language.</p>
+<h3 id="get-started">Get Started</h3>
+<p>Open your terminal and execute :</p>
+<pre><code>sudo apt-get install ansible
+</code></pre><p>There is two necessary components for ansible playbook</p>
+<ol>
+<li>Inventory (Where to deploy)</li>
+<li>Playbook (How to deploy)</li>
+</ol>
+<h3 id="lets-create-playbook">Lets create playbook</h3>
+<p>Actually, playbook is step by step how to deploy our application to server.</p>
+<p>Create the playbook file called playbook.yml, we could write like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">name</span>: command in directory project
+  <span style="color:#66d9ef">hosts</span>: localhost
+  <span style="color:#66d9ef">tasks</span>:
+  - <span style="color:#66d9ef">name</span>: Export MySQL dump database
+    <span style="color:#66d9ef">command</span>: mysqldump -u alvin food_oms_db &gt; food_oms_db.sql
+  - <span style="color:#66d9ef">name</span>: Bundle application with tar
+    <span style="color:#66d9ef">command</span>: tar --exclude=<span style="color:#e6db74">&#39;./.git&#39;</span> -zcvf build/build.tgz .
+  - <span style="color:#66d9ef">name</span>: Copy to VM local
+    <span style="color:#66d9ef">command</span>: scp -i /home/hafiztsalavin/generasi_gigih/virtualbox/private_key build.tgz vagrant@<span style="color:#ae81ff">192.168.20.21</span>:app
+</code></pre></div><p>Name : it&rsquo;s specify name of the step</p>
+<p>Host : define where to execute the task, normally will be explained on inventory file</p>
+<p>Task : it’s like what is the step? Its like procedure to be executed</p>
+<h3 id="lets-create-inventory">Lets create inventory</h3>
+<p>Inventroy is like file that define target of our playbook and normaly inventory is consist of the ip/address of our machine target.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">all</span>:
+    <span style="color:#66d9ef">hosts</span>:
+        <span style="color:#66d9ef">server01</span>:
+            <span style="color:#66d9ef">ansible_host</span>: <span style="color:#ae81ff">192.168.20.1</span>
+</code></pre></div><p>all : it&rsquo;s the global group include all hosts</p>
+<p>hosts : it&rsquo;s contain the list of host in this group</p>
+<p>server01 : it&rsquo;s name our instance as server01</p>
+<p>ansible_host : it&rsquo;s address of our machine</p>
+<h3 id="execute-playbook">Execute playbook</h3>
+<p>And execute the playbook using:</p>
+<p><code>ansible-playbook --inventory inventory.yml --user vagrant --private-key /home/hafiztsalavin/generasi_gigih/virtualbox/private_key playbook.yml</code></p>
+<p>Tada, your application was deployed to server.</p>
+<p>That’s it what can i share. With ansible we can easily a server setup, software installation and a lot more tasks.</p>
+<p>Thankyou !!!</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://hafiztsalavin.space/tags/learning/">learning</a></span>
+        <span class="tag"><a href="https://hafiztsalavin.space/tags/bootcamp/">bootcamp</a></span>
+        
+    </p>
+
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+
+        <span class="tag"><a href="https://hafiztsalavin.space/categories/development/">Development</a></span>
+        
+    </p>
+
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        341 Words
+      </p>
+
+      <p> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2021-08-10
+        
+
+         
+          
+        
+      </p>
+    </div>
+
+    
+    <div class="pagination">
+        <div class="pagination__title">
+            <span class="pagination__title-h"></span>
+            <hr />
+        </div>
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://hafiztsalavin.space/posts/2021/08/6th-weekly-reflection/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">6th Weekly Reflection</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="https://hafiztsalavin.space/posts/2021/08/5th-weekly-reflection/">
+                    <span class="button__text">5th Weekly Reflection</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2022</span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span><span>Made with &#10084; by <a href="https://github.com/hafiztsalavin">Hafiz Tsalavin</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="https://hafiztsalavin.space/bundle.min.ace63d93098bf623f7c286a9084a4c22bfc482944c734f87fe0b685c7c6c7fa0ad2edb028c3b4b60d3343720c8ab490b320ad7f8edf4f6e9a6b898fc529057a9.js" integrity="sha512-rOY9kwmL9iP3woapCEpMIr/EgpRMc0&#43;H/gtoXHxsf6CtLtsCjDtLYNM0NyDIq0kLMgrX&#43;O309ummuJj8UpBXqQ=="></script>
+
+
+
+    </body>
+</html>

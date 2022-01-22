@@ -1,0 +1,905 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Hafiz Tsalavin</title>
+        <link>https://hafiztsalavin.space/posts/</link>
+        <description>Recent content in Posts on Hafiz Tsalavin</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://hafiztsalavin.space/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Talking about Big O Notation</title>
+            <link>https://hafiztsalavin.space/posts/2021/10/talking-about-big-o-notation/</link>
+            <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/10/talking-about-big-o-notation/</guid>
+            <description>Hello everyone ! After few week ago break to writing a blog and trying to re-learn about Data Structures and Algorithms, here I would like to share one thing that I think is important to how analysis performance some algorithms, ya Big-O notation (read with an O, not a zero). Honestly, there are so many method to analyze performance some algorithm, but here I only share the most method that we usually use to analyze an algorithm.</description>
+            <content type="html"><![CDATA[<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>After few week ago break to writing a blog and trying to re-learn about Data Structures and Algorithms, here I would like to share one thing that I think is important to how analysis performance some algorithms, ya Big-O notation <strong>(read with an O, not a zero)</strong>. Honestly, there are so many method to analyze performance some algorithm, but here I only share the most method that we usually use to analyze an algorithm. We often use Big-O notation as a simple way to describe the speed or approximate run time of an algorithm, that’s why we always should be taking Big-O to consideration when we are writing algorithm.</p>
+<p>Actually, I write this blog is based on books that I am read recently, <code>“Data Structure and Algorithms”</code> by Hemant Jain. You can choose another language, because I am currently having develop with Ruby, so I choose Ruby for a programming language.</p>
+<p>Before we jump into concept of Big-O Notation, we have to ensure <strong>“what is an Algorithms”</strong> itself. From the books is :</p>
+<blockquote>
+<p>“algorithm is a set of steps to accomplish as task or an algorithm in a computer program in which a set of steps applied over a set of input to produce a set of output”.</p>
+</blockquote>
+<p>Simply put, it is a set of instructions for completing some task. Data structure is just some ways to store information in computer and algorithms use to manipulate the data.</p>
+<p>Anyway, there are most important properties before we are writing an algorithm is:</p>
+<ol>
+<li><strong>Correctness</strong> – its means when you are trying to solve problem with algorithm please make sure that the algorithm is correct and able to process all given input and provide correct output.</li>
+<li><strong>Efficiency</strong> – its means the algorithm should be efficient to solve problems. Efficiency measured in two parameters, first is <strong>Time-Complexity</strong> and second is <strong>Space-Complexity</strong>.</li>
+</ol>
+<p><strong>Time-Complexity</strong> is every or each algorithm certain needed of time to run or complete to provided the result or in other words how to quick result provided by the algorithm.</p>
+<p><strong>Space-Complexity</strong> is how much additional memory or storage of your algorithm consume to give the result. But here, I make boundaries in this article that we just discuss about Time-Complexity.</p>
+<p>So, what is exactly <strong>Big-O notations?</strong> Big-O  is used to describe performance of an algorithm, or in other words we use Big-O to measured how efficient our algorithm run that represent <strong>time complexity</strong>. We use it as a tool to compare algorithm to other algorithm.</p>
+<p>For more details, you can see the graph below. The graph will be explain relationship between time and input size.</p>
+<p><img src="https://hafiztsalavin.space/img/images/bigo_cheatsheet.png" alt="image "></p>
+<p>source: <a href="https://www.bigocheatsheet.com/">Big O Cheat Sheet</a>.</p>
+<p>As you can see, there are <strong>two main things to calculating the Big-O of an algorithms</strong>, number of operations (complexity or time) and number of input size. I sure that you wondering what is relationship between them (time and input).  Actually, to find out best algorithm it’s depends on the input size. We want to keep our time or operations as low as possible also to be as efficient as possible while the size of our data increases. It’s important to avoid red zone if possible.</p>
+<p>There are common time complexities, from fastest to slowest.</p>
+<table>
+<thead>
+<tr>
+<th>Notation</th>
+<th>Complexity</th>
+<th>Rate of growth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O(1)</td>
+<td>Constant</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td>O(log n)</td>
+<td>Logarithmic</td>
+<td></td>
+</tr>
+<tr>
+<td>O(n)</td>
+<td>Linear</td>
+<td></td>
+</tr>
+<tr>
+<td>O(n log n)</td>
+<td>Log Linear</td>
+<td></td>
+</tr>
+<tr>
+<td>O(n²)</td>
+<td>Quadratic</td>
+<td>Slow</td>
+</tr>
+</tbody>
+</table>
+<p>Lets break down about the different notations of Big-O one by one and all examples are write in ruby.</p>
+<h3 id="constant-time-o1">Constant Time: O(1)</h3>
+<blockquote>
+<p>An algorithm that given input of n size and only takes a single step for the algorithm. That’s why called constant, because the algorithm will always run at a constant time.</p>
+</blockquote>
+<p>For examples</p>
+<ul>
+<li>If we want to accessing x element of an array, the run time will be constant or O(1).</li>
+<li>Push and pop of a stack.</li>
+<li>Accessing an element of Hash-Table or Dictionary.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">show_array</span>(arr)
+	puts <span style="color:#960050;background-color:#1e0010">“</span><span style="color:#75715e">#{arr[0]}”</span>
+<span style="color:#66d9ef">end</span>
+
+arr <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">12</span><span style="color:#f92672">]</span>
+show_array(arr)
+</code></pre></div><p>The reason the runtime of this method is O(1) is no matter how big the array, the number of operations doesn’t change.</p>
+<h3 id="logarithmic-time-olog-----n">Logarithmic Time: O(log     n)</h3>
+<blockquote>
+<p>An algorithm that given an input of size n, the number of steps it takes to accomplish the task are decreased by some factor with each step.</p>
+</blockquote>
+<p>The most common example that used logarithmic time is binary search. Basically, binary search is an algorithm to search some position in an array by elimination a half of input array to find out the position. We have to make sure that the array input have sorted before. Actually, to understand the binary search we have to know the concept of recursive function.</p>
+<p>Lets take a look the example below for binary search.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search</span>(arr, target)
+	search_rekursif(arr, <span style="color:#ae81ff">0</span>, arr<span style="color:#f92672">.</span>length<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target )
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search_rekursif</span>(arr, low, high, target)
+	<span style="color:#66d9ef">if</span> low <span style="color:#f92672">&gt;</span> high
+		<span style="color:#66d9ef">return</span> print <span style="color:#e6db74">&#39;Cannot find the target&#39;</span>  
+    <span style="color:#66d9ef">end</span>
+
+	mid <span style="color:#f92672">=</span> low <span style="color:#f92672">+</span>(high<span style="color:#f92672">-</span>low)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+	<span style="color:#66d9ef">if</span> arr<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> target
+		<span style="color:#66d9ef">return</span> print mid
+	<span style="color:#66d9ef">elsif</span> arr<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> target
+		<span style="color:#66d9ef">return</span> search_rekursif(arr, mid <span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, high, target)
+	<span style="color:#66d9ef">else</span>
+		<span style="color:#66d9ef">return</span> search_rekursif(arr, low, mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target)
+	<span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+arr <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">12</span><span style="color:#f92672">]</span>
+target <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>
+search(arr,target)
+</code></pre></div><p>As you can see, we will find where the position of the target with return location on the arrays input. We start in the function search that will be call function search_recursive.</p>
+<p>First, we have to ensure the middle of the array, and than we compare middle value with target value, will be greater or smaller than the middle value. The middle will be minus one if the target value is smaller than middle value, that’s means the target value in the range middle to down. Otherwise, the middle will be plus one if the target is greater than middle value. This is done until match is found.</p>
+<h3 id="linear-time-on">Linear Time: O(n)</h3>
+<blockquote>
+<p>An algorithm is said to run in linear time if the execution time of the algorithm is directly proportional to the input size.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">show_all</span>(items)
+	items<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>item<span style="color:#f92672">|</span>
+		print item		
+	<span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>As you can see, we have to see/traverse all items one by one to print out all items. An array with size lets say 10, so the method will be take 10 iterations, so as an input increases, runtime will be also increases.</p>
+<h3 id="loglinear-on-log-n">LogLinear: O(n log n)</h3>
+<blockquote>
+<p>An algorithm is said to run in logarithmic time if the execution time of an algorithm is proportional to the product of input size and logarithm of the input size.</p>
+</blockquote>
+<p>Actually, good example to log linear is a quicksort algorithm. But talk this algorithm is different part. I only give a example to imagine loglinear, if you have 10 size or array than you want to sorting, the time complexity only 20 time complexity. Sounds good but quicksort is special kind of algorithm, quicksort will be O(n log n) with average case but with worse case will be O(n²).</p>
+<h3 id="quadratic-runtime-on">Quadratic Runtime: O(n²)</h3>
+<blockquote>
+<p>An algorithm that given input of size n, the number of steps it takes to accomplish a task is square of n.</p>
+</blockquote>
+<p>Bubble sort, selection sort and insertion sort is examples for O(n²).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_all</span>(arrays)
+	arrays<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>array_1<span style="color:#f92672">|</span>
+		arrays<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>array_2<span style="color:#f92672">|</span>
+			print <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>array_1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>array_2<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>			
+		<span style="color:#66d9ef">end</span>		
+	<span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+arrays <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span><span style="color:#f92672">]</span>
+print_all(arr)
+</code></pre></div><p>As you can see, there is have loop inside loop or a nested loop. You can imagine if size of input let say 10 and will take 100 iteration. That’s why called exponential runtime because the loop has to square the amount of iteration based on the input size. That it.</p>
+<p>Well, with understand of concept Big-O notation we will easily to looks <code>which one is the best?</code> and <code>which one is more efficient to solve problems?</code></p>
+<p>I would like to thank you for reading. I hope you have learned something new or this post can help you to introduce what is Big-O.</p>
+<p>Thank you !!!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Final Reflection: I AM GROWTH</title>
+            <link>https://hafiztsalavin.space/posts/2021/08/final-reflection-i-am-growth/</link>
+            <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/08/final-reflection-i-am-growth/</guid>
+            <description>Hello everyone ! From the title of this post, ya this is my last reflection on Intermediate Phase GenerasiGIGIH. Technical class is over. There are many things that I got this phase. Unfortunately, in the last week my condition is drop. I cannot continuing my final project and cannot attend in technical class also english class due to my doctor suggest me to totally bed rest. But, I&amp;rsquo;ll finished the project out of the time.</description>
+            <content type="html"><![CDATA[<p><img src="https://hafiztsalavin.space/img/images/yabbb.png" alt="image"></p>
+<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>From the title of this post, ya this is my last reflection on Intermediate Phase GenerasiGIGIH. Technical class is over. There are many things that I got this phase. Unfortunately, in the last week my condition is drop. I cannot continuing my final project and cannot attend in technical class also english class due to my doctor suggest me to totally bed rest. But, I&rsquo;ll finished the project out of the time. I am very grateful for everything I had in GenerasiGIGIH.</p>
+<h3 id="for-my-progress-in-backend-engineering-is-">For my progress in backend engineering is &hellip;</h3>
+<p>Something new for me in the world of ‘backend engineering’. First time I knew about programming from robotics and entered college with engineering background because I am interested in robotics actually. I have learned basic programming language in collage, but in this field is totally different. Only several part is similar like algorithm and data structure.</p>
+<p>After 6 weeks of learning in the technical class and got chance to ask my question to the mentors about several part that I confused before, I don’t know my feels is more motivated also curious to explore more deep about backend engineering. Especially after learning TDD, refactoring, unit testing and clean code makes me realize that this is the art of backend engineering. &ldquo;Make it works, Make it beautiful, Make it fast&rdquo;.</p>
+<p>But ya, in last week i can&rsquo;t attend the technical class because need to bed rest whereas the materials its so pretty good (SOLID Principles and microservices), but its okay. In this pandemic, healty is number one, right?</p>
+<p>Actually, out there are still many things that I have not learned. Made me to keep curious and keep exploring more on backend engineering.</p>
+<h3 id="skills-ive-developed-in-the-last-6-weeks">Skills I’ve developed in the last 6 weeks</h3>
+<p>To be honest, a lot skill that i have developed in last 6 weeks. Start from English skill. I still remember that first day of cakap class with teacher at this time if i am not wrong is Miss Anisa, she asked to me to explain one of popular game which is Among Us and what that i am explain to other student included her is not related with what she asked to me. Very embrassing. But she talk to me that &ldquo;no problem, we are learning together here, enjoy&rdquo; and than she with patiently corrected me when I speak a mistake. Thanks Miss. After this incident I always encouraged my self to learn how to speak in daily conversation from youtube and practice in the next class Cakap. Other than, writing this weekly reflection in English actually first time I writing in English (article). I dont know the grammatical is correct or not at least i am learning and trying to writing in English.</p>
+<p>Next to the technical skill, i can say that the curriculum is cool. They teach us not only how to code, but how to code right and better. From OOP to deploying. Amazing. I have summarized several materials in my blog. What I do right now is implement in all that i got from technical class, sharpen my coding skill with logical thinking when coding and understanding the problem first before crack the problem. That&rsquo;s it and of course practice and creating something.</p>
+<h3 id="good-habits-that-i-learn-from-generasigigih">Good habits that I learn from GenerasiGIGIH</h3>
+<p>Reading in English</p>
+<p>After the incident in English class, actually encouraged my self to learn english and habbit that I build first is change my morning routine that usually I use to read books in Bahasa slowly I change with English books.</p>
+<p>Practicing in structure data and algorithm</p>
+<p>I don&rsquo;t know, since I joined the class, I think that stong in fundamental which is structure data and algorithm is important. From that I realize and trying to practicing in online platform like hackerrank and I think I&rsquo;ll writing about structure data and algorithm in my next blog. Interesting.</p>
+<h3 id="how-many-my-confindent-in-percent">How many my confindent in percent</h3>
+<p>I confident with 70% to be hired in backend engineering after learning with GenerasiGIGIH. Lets elaborate, basicly 40% i got from my college and 30% from GenerasiGIGIH. I realize that entering profesional the requires not only technical skill but also soft skills especially communicate with english.</p>
+<p>And GenerasiGIGIH cover 30%, from this program i got technical skill such as Testing, Deployment and many more that i feel it will be useful in backend engineering. I learning how to speak and write in English through Cakap class also soft skill from XL Future Leader through IDP Mentoring and Career Readiness Class.</p>
+<p>And 30%? I think what I do right now is build personal branding (my blog included my effort to build personal branding).</p>
+<h3 id="for-me">For me</h3>
+<p>So far, I am proud of my self until week 7 because i always attend technical class and english class (only 1 cannot attend English Class due to my family is wedding). But in latest week of the program my condition is drop and the impact is cannot finished the final project and cannot attended in several class in latest week. But, no problem, I&rsquo;m still proud of myself that I was able to keep up with the lesson. I can say that “I AM GROWTH”.</p>
+<p>Thank you GenerasiGIGIH !!!!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Clean code</title>
+            <link>https://hafiztsalavin.space/posts/2021/08/clean-code/</link>
+            <pubDate>Wed, 18 Aug 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/08/clean-code/</guid>
+            <description>Hello everyone ! This week, I have been studying about clean code. Honestly, i haven&amp;rsquo;t implemented it but i&amp;rsquo;ll implement it to my next code and always implement it. Oh ya, in here i only summarised some key things and found some useful tips so, if you found something wrong, just contact me hehe.
+Actually, the topic is so famous among software engineer. &amp;ldquo;And the most important book that should be read or anyone who wants to be a good software developer is Clean Code by Uncle Bob&amp;rdquo;, said mas Iqbal and mas Arief as instructor in technical class.</description>
+            <content type="html"><![CDATA[<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>This week, I have been studying about clean code. Honestly, i haven&rsquo;t implemented it but i&rsquo;ll implement it to my next code and always implement it. Oh ya, in here i only
+summarised some key things and found some useful tips so, if you found something wrong, just contact me hehe.</p>
+<p>Actually, the topic is so famous among software engineer. &ldquo;And the most important book that should be read or anyone who wants to be a good software developer is Clean Code by Uncle Bob&rdquo;, said mas Iqbal and mas Arief as instructor in technical class. The book is The Clean Code book, written by the God Robert C Martin, also known as ‘Uncle Bob. Ya, this book is in my reading list actually and i already have the e-book.</p>
+<p>So, clean code is based on my what i have learn yesterday that clean code is code with right format that easily to understand if code read to another programmer and easy to change because your code will be read more often that it is written, your code are not the only user of your code and your code (most probably) are not the only one that will maintain it.</p>
+<p>First things first, we have to know about code smell. Because, how to know the code is clean without to know the code is (in sense) dirty/bad.</p>
+<h3 id="code-smell">Code Smell</h3>
+<p>Code smell is like code makes you confused when you trying to understand the logic of program. Code smell will be run without problem, error or bug, but makes you confuse to read and difficult to maintenance. Determining what is and is not a code smell is subjective, and varies by programming language and developer. So, there is several reason that makes your code is smell like have a duplicate code, the methods too big, classes with too much code and too many instance variables.</p>
+<p>So, what are characteristics of clean code?</p>
+<ul>
+<li>Elegant and efficient. Clean code does one thing well. (Bjarne, inventor of C++)</li>
+<li>Reads like a well-written prose, full of crisp abstractions. (Grady, autor of OOA)</li>
+<li>Can be enhanced by other developers, has tests, meaningful names, smaller is better. (Big Dave, founder of OTI)</li>
+<li>Pretty much what you expected. (Ward, inventor of Wiki)</li>
+</ul>
+<h3 id="names">Names</h3>
+<ul>
+<li>Use name that pronounceable and searchable</li>
+<li>Make meaningful distinction</li>
+<li>Pick name that can give you an abstraction of the name</li>
+<li>Use intention-revealing names</li>
+<li>Pick one word per concept</li>
+<li>Classes and objects should have noun or noun phrase names</li>
+<li>Methods should have verb or verb phrase names</li>
+</ul>
+<h3 id="comments">Comments</h3>
+<p>Add comments only to explain how you write this or don’t add comments if you can explain it in code.</p>
+<h3 id="formatting">Formatting</h3>
+<ul>
+<li>Vertical formatting
+<ul>
+<li>Vertical openness</li>
+<li>Vertical density</li>
+<li>Vertical ordering</li>
+</ul>
+</li>
+<li>Horizontal formatting
+<ul>
+<li>Horizontal alignment</li>
+<li>Indentation</li>
+</ul>
+</li>
+<li>Be consistent with the rules of your team</li>
+</ul>
+<h3 id="function">Function</h3>
+<ul>
+<li>A function should be short/smal and only do one thing. If your function is doing more than “one thing” better to extract to another function.</li>
+<li>Prefer fewer argument, a function shouldn’t have more than 3 to 5 arguments. Keep it as low as possible.</li>
+<li>Have no side effects. A function should not do anything other than what its name describe.</li>
+</ul>
+<p>I have one things that i think is interesting, the name is rule of three. Maybe related with Dont Repeat Yourself or DRY:</p>
+<ol>
+<li>When you are doing something for the first time, just get it done.</li>
+<li>When you are doing something similiar for the second time, cringe at having to repeat but do the same thing anyway.</li>
+<li>When you are doing something for the third time, start refactoring.</li>
+</ol>
+<p>I think if we try to follow or implement these principles, i believe our code quality will be much better and easy to maintain.</p>
+<p>Thank you !!!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>6th Weekly Reflection</title>
+            <link>https://hafiztsalavin.space/posts/2021/08/6th-weekly-reflection/</link>
+            <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/08/6th-weekly-reflection/</guid>
+            <description>Hello everyone ! See what i got from Gojek and YABB. Amazing.
+So, for this weekly reflection here, i have to answer questions from my peers on Generasi GIGIH and i will be chosen question from them. So&amp;hellip;
+Do you become more confident to become what you aspire to be after joining GenerasiGIGIH? To be honest, after joining GenerasiGIGIH make me confident also motivated. So many instructors that inspired me actually.</description>
+            <content type="html"><![CDATA[<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>See what i got from Gojek and YABB. Amazing.</p>
+<p><img src="https://hafiztsalavin.space/img/images/packet.jpeg" alt="packet"></p>
+<p>So, for this weekly reflection here, i have to answer questions from my peers on Generasi GIGIH and i will be chosen question from them. So&hellip;</p>
+<h3 id="do-you-become-more-confident-to-become-what-you-aspire-to-be-after-joining-generasigigih">Do you become more confident to become what you aspire to be after joining GenerasiGIGIH?</h3>
+<p>To be honest, after joining GenerasiGIGIH make me confident also motivated. So many instructors that inspired me actually. I was to learn that fundamental and basic is more important. Invest in fundamental is best way to keep survive in era digital, right?. So many that can I improve from soft skill to hard skill, made me realize that there are still many things that I can explore, as it be technical or non-technical material. But if the fundamental not strong, all of them hard to knowing.</p>
+<h3 id="what-is-your-effective-method-of-learning-especially-during-virtual-learning-class">What is your effective method of learning? Especially during virtual learning class.</h3>
+<p>Just make a cup of coffee before joining the class is effective for me to keep focus during classes.</p>
+<p>Ya actually, in this week so many classes off. Only technical class on monday that continuing discuss about CI/CD and thursday on English class. Ya I think this week is relaxation for me because sometimes I am feel overwhelmed with all the learning process and take a time to refresh my mind. Chill with my family and playing dota with my friends. Enough for me.</p>
+<h3 id="how-do-you-tackle-burn-out-when-learning-about-so-many-things-in-so-little-time">How do you tackle burn out when learning about so many things in so little time?</h3>
+<p>Just make a cup of coffee and playing lofi music. For relaxing just playing dota 2 with my friend and chill with netflix movie. That&rsquo;s it to tackle burn out. (quite introvert)</p>
+<p>Thank you !!!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Automated with Ansible</title>
+            <link>https://hafiztsalavin.space/posts/2021/08/automated-with-ansible/</link>
+            <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/08/automated-with-ansible/</guid>
+            <description>Hello everyone ! In previous blog, I was share automation to the configuration virtual environment but we have spent time to do manual installation. So, to automation deployment we need Ansible to help us to do automation.
+What exactly is Ansible ? Actually, ansible is an open source software that automates software provisioning, configuration management, and application deployment. We will use ansible playbook to automate deployment. An ansible playbook is like blueprint that can automation task to send commands to remote computer in a scripted way.</description>
+            <content type="html"><![CDATA[<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>In previous blog, I was share automation to the configuration virtual environment but we have spent time to do manual installation. So, to automation deployment we need Ansible to help us to do automation.</p>
+<h3 id="what-exactly-is-ansible-">What exactly is Ansible ?</h3>
+<p>Actually, ansible is an open source software that automates software provisioning, configuration management, and application deployment. We will use ansible playbook to automate deployment. An ansible playbook is like blueprint that can automation task to send commands to remote computer in a scripted way. Normally, ansible uses YAML for playbook language.</p>
+<h3 id="get-started">Get Started</h3>
+<p>Open your terminal and execute :</p>
+<pre><code>sudo apt-get install ansible
+</code></pre><p>There is two necessary components for ansible playbook</p>
+<ol>
+<li>Inventory (Where to deploy)</li>
+<li>Playbook (How to deploy)</li>
+</ol>
+<h3 id="lets-create-playbook">Lets create playbook</h3>
+<p>Actually, playbook is step by step how to deploy our application to server.</p>
+<p>Create the playbook file called playbook.yml, we could write like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">name</span>: command in directory project
+  <span style="color:#66d9ef">hosts</span>: localhost
+  <span style="color:#66d9ef">tasks</span>:
+  - <span style="color:#66d9ef">name</span>: Export MySQL dump database
+    <span style="color:#66d9ef">command</span>: mysqldump -u alvin food_oms_db &gt; food_oms_db.sql
+  - <span style="color:#66d9ef">name</span>: Bundle application with tar
+    <span style="color:#66d9ef">command</span>: tar --exclude=<span style="color:#e6db74">&#39;./.git&#39;</span> -zcvf build/build.tgz .
+  - <span style="color:#66d9ef">name</span>: Copy to VM local
+    <span style="color:#66d9ef">command</span>: scp -i /home/hafiztsalavin/generasi_gigih/virtualbox/private_key build.tgz vagrant@<span style="color:#ae81ff">192.168.20.21</span>:app
+</code></pre></div><p>Name : it&rsquo;s specify name of the step</p>
+<p>Host : define where to execute the task, normally will be explained on inventory file</p>
+<p>Task : it’s like what is the step? Its like procedure to be executed</p>
+<h3 id="lets-create-inventory">Lets create inventory</h3>
+<p>Inventroy is like file that define target of our playbook and normaly inventory is consist of the ip/address of our machine target.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">all</span>:
+    <span style="color:#66d9ef">hosts</span>:
+        <span style="color:#66d9ef">server01</span>:
+            <span style="color:#66d9ef">ansible_host</span>: <span style="color:#ae81ff">192.168.20.1</span>
+</code></pre></div><p>all : it&rsquo;s the global group include all hosts</p>
+<p>hosts : it&rsquo;s contain the list of host in this group</p>
+<p>server01 : it&rsquo;s name our instance as server01</p>
+<p>ansible_host : it&rsquo;s address of our machine</p>
+<h3 id="execute-playbook">Execute playbook</h3>
+<p>And execute the playbook using:</p>
+<p><code>ansible-playbook --inventory inventory.yml --user vagrant --private-key /home/hafiztsalavin/generasi_gigih/virtualbox/private_key playbook.yml</code></p>
+<p>Tada, your application was deployed to server.</p>
+<p>That’s it what can i share. With ansible we can easily a server setup, software installation and a lot more tasks.</p>
+<p>Thankyou !!!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>5th Weekly Reflection</title>
+            <link>https://hafiztsalavin.space/posts/2021/08/5th-weekly-reflection/</link>
+            <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/08/5th-weekly-reflection/</guid>
+            <description>Hello everyone ! Unbelievable that only 2 weeks left in intermediate phase. Many things have happened in this one week, chaos in infrastructure especially. I didn’t expect that at the class would be chaos, but I learned many things that I was write summarize it in previous blog.
+So, how do I feel about the board? To be honest, when the score announced, its actually beyond my expectation. My expectation is like &amp;ldquo;ya maybe my position around 200th&amp;rdquo; and what just happen?</description>
+            <content type="html"><![CDATA[<p><img src="https://hafiztsalavin.space/img/images/yabbb.png" alt="image"></p>
+<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>Unbelievable that only 2 weeks left in intermediate phase.  Many things have happened in this one week, chaos in infrastructure especially. I didn’t expect that at the class would be chaos, but I learned many things that I was write summarize it in previous blog.</p>
+<h3 id="so-how-do-i-feel-about-the-board">So, how do I feel about the board?</h3>
+<p>To be honest, when the score announced, its actually beyond my expectation. My expectation is like &ldquo;ya maybe my position around 200th&rdquo; and what just happen? my position around 100th. OMG. Very grateful.</p>
+<p>But my target is not the score actually, my goals for this phase is to learn and progress as much as possible and the finished all of the class obviously. I know when I am in the class, I am so passive and sometimes ask to the instructor through the chat zoom. At least I pushed myself to ask when I am little bit confusing about the materials. Sadly, but yea at least I already made a progress, right?</p>
+<p>To my friends that at the top of the board, i just saying, “congrats”. You are great. That’s it.</p>
+<p>Because I know your effort, ambition, hard work and your energy to get it. You are inspired to me.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Deployment using Vagrant</title>
+            <link>https://hafiztsalavin.space/posts/2021/08/deployment-using-vagrant/</link>
+            <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/08/deployment-using-vagrant/</guid>
+            <description>Hello everyone ! Today I’ll share what I have learned something new in world-deployment like how to quickly set up a local development environment. Yess using vagrant, hearing something weird?
+What’s vagrant? Actually, vagrant is tool that makes easy to build and share virtual environment that in normally its take time and effort to configure it one by one. With vagrant makes everything looks like automate by describing the virtual environment setting in the configuration file called Vagrantfile.</description>
+            <content type="html"><![CDATA[<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>Today I’ll share what I have learned something new in world-deployment like how to quickly set up a local development environment. Yess using vagrant, hearing something weird?</p>
+<h3 id="whats-vagrant">What’s vagrant?</h3>
+<p>Actually, vagrant is tool that makes easy to build  and share virtual environment that in normally its take time and effort to configure it one by one. With vagrant makes everything looks like automate by describing the virtual environment setting in the configuration file called <code>Vagrantfile</code>.</p>
+<p>So many benefits using vagrant, one the most benefits is we can easily build the same environment in multiple times with same setting in different environment. Other than, we can sharing a <code>Vagrantfile</code> to other people to provide the same virtual environment.</p>
+<h3 id="lets-play">Lets Play</h3>
+<p>Oke, first of all we need virtual box and I assume you already install the virtual box to simulation production our application. Lets install vagrant with:</p>
+<p><code>sudo apt-get -y install vagrant</code></p>
+<p>And than we need add the vagrant box with the command:</p>
+<p><code>vagrant box add &lt;your main root project directory&gt;/focal64</code></p>
+<p>After that you can running this command in root project directory:</p>
+<p><code>vagrant init ubuntu/focal64</code></p>
+<p>This will generate a Vagrantfile with a VM with image ubuntu 20.04 (Focal Fossa).
+And now you can <code>vagrant up</code> to create the VM also <code>vagrant ssh</code> if use ssh to access the VM.</p>
+<p>You can start the VM with <code>vagrant up</code> to stop just with <code>vagrant halt</code> also you can destroy the VM if you no need longer a VM with <code>vagrant destroy --force</code></p>
+<p>This time to explore Vagrantfile, lets change the ip network with private network:</p>
+<pre><code>Vagrant.configure(&quot;2&quot;) do |config|
+  config.vm.box = &quot;ubuntu/focal64&quot;
+  config.vm.network &quot;private_network&quot;, ip: &quot;192.168.20.21&quot;
+  
+  config.vm.provider &quot;virtualbox&quot; do |vb|  
+  end
+end
+</code></pre><p>After saving the Vagrantfile start the VM with <code>vagrant up</code>. In this case we just setup with ip private with ubuntu server 20.04.</p>
+<h3 id="deployment">Deployment</h3>
+<p>In normally, in the manual step of the deployment is:</p>
+<ol>
+<li>Install dependencies</li>
+<li>Install application</li>
+<li>Configure application</li>
+<li>Run application</li>
+</ol>
+<p>When we run our application directly using <code>main.rb</code> it will run the current user and attached to current terminal. What happen if we want to close terminal? or what happent if we want to restart the applicaton?</p>
+<p>So we better using servis manager called <code>systemd</code></p>
+<h3 id="systemd">Systemd</h3>
+<p>Basically, systemd is a service manager that will managed our application like starting application after reboot, restart application etc. In this case, we use Ruby and Sinatra ya. So what we need to use systemd is :</p>
+<ul>
+<li>Create a new file called sinatra.service inside /etc/systemd/system.</li>
+</ul>
+<pre><code>    cd /etc/systemd/system
+    sudo nano sinatra.service
+</code></pre><ul>
+<li>Create the code and save the previous ﬁle to <code>/etc/systemd/system as sinatra.service</code></li>
+</ul>
+<pre><code>    [Unit]
+    Description=Sinatra application
+
+    [Service]
+    User=root
+    WorkingDirectory=/home/vagrant/app
+    ExecStart=/usr/bin/ruby web.rb -o 192.168.20.21
+    Restart=on-failure
+
+    [Install]
+    WantedBy=multi-user.target
+</code></pre><ul>
+<li>Reload systemd unit list using</li>
+</ul>
+<pre><code>    sudo systemctl daemon-reload
+</code></pre><ul>
+<li>Start service using</li>
+</ul>
+<pre><code>    sudo systemctl start sinatra.service
+</code></pre><ul>
+<li>Stop service using</li>
+</ul>
+<pre><code>    sudo systemctl stop sinatral.service
+</code></pre><ul>
+<li>To check the status</li>
+</ul>
+<pre><code>    sudo systemctl status sinatral.service
+</code></pre><p>That’s it what can i share. And i think Vagrant is a good and simple tool when we are able to quickly set up a local development environment.</p>
+<p>Cheers and happy reading! Thank You!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>4th Weekly Reflection</title>
+            <link>https://hafiztsalavin.space/posts/2021/08/4th-weekly-reflection/</link>
+            <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/08/4th-weekly-reflection/</guid>
+            <description>Hello everyone ! Well, I have been studying in this program for fourth weeks. So much things i get from this program, not only technical but also in English skill especially. I feel growth in fourth weeks, so much improve in terms of hard skill or soft skill. So grateful.
+I can describe actual what happened to me during the program with natural events is like rainbow after thunderstorm in the night.</description>
+            <content type="html"><![CDATA[<p><img src="https://hafiztsalavin.space/img/images/yabbb.png" alt="image"></p>
+<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>Well, I have been studying in this program for fourth weeks. So much things i get from this program, not only technical but also in English skill especially. I feel growth in fourth weeks, so much improve in terms of hard skill or soft skill. So grateful.</p>
+<p>I can describe actual what happened to me during the program with natural events is like rainbow after thunderstorm in the night. I think is good to imagine what happened to me. Thunderstorm describe to many things I that have to learn and surprise due to so many new things that I have never learned before and rainbow is describe results that what i get from this program.</p>
+<p>On scale 1–100 i, yea i give 90% to my effort, i miss 10% because i not attend in english class but 100% attend in technical class.</p>
+<p>To other participants, I want to know what your favorite song for learning? maybe rock, classic or pop?</p>
+<p>Thank you!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Test Driven Development</title>
+            <link>https://hafiztsalavin.space/posts/2021/07/test-driven-development/</link>
+            <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/07/test-driven-development/</guid>
+            <description>Hello everyone ! Something new for me to learn this topic. I have never practiced or tried it out but I have to try to summarize it because this is intersting for me. So, what is TDD?
+TDD is acronym of Test Driven Development, basically is a development strategy in which you write unit test first before actually implementing the code because our code development is driven by test like the name, Test Driven.</description>
+            <content type="html"><![CDATA[<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>Something new for me to learn this topic. I have never practiced or tried it out but I have to try to summarize it because this is intersting for me. So, what is TDD?</p>
+<p>TDD is acronym of <code>Test Driven Development</code>, basically is a development strategy in which you write  unit test first before actually implementing the code because our code development is driven by test like the name, Test Driven.</p>
+<h3 id="rule-of-tdd">Rule of TDD</h3>
+<p>TDD have a some rules like a game when you are practicing TDD. What&rsquo;s rules?</p>
+<ol>
+<li><code>Write production code only to pass a failing unit test</code></li>
+</ol>
+<p>This mean, before we start to write code, we need to write the test first and we have to make sure that the test will surely fail or red when executed.</p>
+<ol start="2">
+<li><code>Write no more of a unit test than sufficient to fail</code></li>
+</ol>
+<p>This means that we create test, make the test as <strong>small(atomic) as possible</strong>.</p>
+<ol start="3">
+<li><code>Write no more production code than necessary to pass the one failing unit test</code></li>
+</ol>
+<p>After we create a failing test. Now write code just enough to make that test pass. Not more code, just enough code.</p>
+<p>After the test is success, we dont need to continue the code, instead we proceed to make the next failing test.</p>
+<h3 id="cycle-of-tdd">Cycle of TDD</h3>
+<p>To make easy, lets imagine the cycle of TDD. When you are doing TDD, just looked the cycle.</p>
+<p><img src="https://hafiztsalavin.space/img/images/tdd/rgb.png" alt="image"></p>
+<ul>
+<li>First is write test code to make it fail</li>
+<li>Second, just writing code to make that test work.</li>
+<li>Third, refactor if there is something to refactor. You can skip this step if nothing useful to refactor. If your code is complex, does not stop at just making your tests pass. Spend your time to refactoring your code to make more readable and clean while still make sure it passes the test.</li>
+</ul>
+<h3 id="lets-writing-test-case">Lets writing test case</h3>
+<p>Imagine that we will playing around data structure stack, test file will be called <code>stack_spec.rb</code> and we are going to test with 4 test:</p>
+<ol>
+<li>Creates Stack object</li>
+<li>Stack having a read method</li>
+<li>Stack invoke read method</li>
+<li>And method read return nil when empty stack</li>
+</ol>
+<h3 id="add-test">Add Test</h3>
+<p>Start adding simple test and make the test is failing</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">RSpec</span><span style="color:#f92672">.</span>describe <span style="color:#66d9ef">Stack</span> <span style="color:#66d9ef">do</span>
+    it <span style="color:#e6db74">&#39;should return nil when reading an empty stack&#39;</span> <span style="color:#66d9ef">do</span>
+        stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">Stack</span><span style="color:#f92672">.</span>new()
+        expect(stack<span style="color:#f92672">.</span>read)<span style="color:#f92672">.</span>to eq(<span style="color:#66d9ef">nil</span>)
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Run <code>rspec</code> and the test is failing.</p>
+<p><img src="https://hafiztsalavin.space/img/images/tdd/3.png" alt="image"></p>
+<p>Message error <code>uninitialized constant Stack</code>, they tell us that Stack class not defined.</p>
+<h3 id="pass-test">Pass Test</h3>
+<p>Now, start writing code and try to pass that test. Just enough to make that test pass. Not more code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Stack</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>
+      @data <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+    <span style="color:#66d9ef">end</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read</span>
+        @data<span style="color:#f92672">.</span>last
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>And than run it again. Don&rsquo;t forget to commit after pass the test to see what we have to pass the test.</p>
+<p><img src="https://hafiztsalavin.space/img/images/tdd/2.png" alt="image"></p>
+<p>Yeay cool.</p>
+<h3 id="repeat-the-process-for-the-next-unit-tes">Repeat the process for the next unit tes</h3>
+<p>We remember that stack have push after we can read it. Lets make the test that we push 1 and read it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">RSpec</span><span style="color:#f92672">.</span>describe <span style="color:#66d9ef">Stack</span> <span style="color:#66d9ef">do</span>
+    it <span style="color:#e6db74">&#39;should return nil when reading an empty stack&#39;</span> <span style="color:#66d9ef">do</span>
+        stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">Stack</span><span style="color:#f92672">.</span>new()
+        expect(stack<span style="color:#f92672">.</span>read)<span style="color:#f92672">.</span>to eq(<span style="color:#66d9ef">nil</span>)
+    <span style="color:#66d9ef">end</span>
+
+    it <span style="color:#e6db74">&#39;should return 1 when reading a stack with data [1]&#39;</span> <span style="color:#66d9ef">do</span>
+      stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">Stack</span><span style="color:#f92672">.</span>new()
+      stack<span style="color:#f92672">.</span>push(<span style="color:#ae81ff">1</span>)
+      expect(stack<span style="color:#f92672">.</span>read)<span style="color:#f92672">.</span>to eq(<span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Run with <code>rspec -fd</code> and we can see message error like this:</p>
+<p><img src="https://hafiztsalavin.space/img/images/tdd/4.png" alt="image"></p>
+<p>With <code>rpech -fd</code>, we can see that the first test is pass but second test is failing.</p>
+<h3 id="pass-test-1">Pass Test</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Stack</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>
+      @data <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+    <span style="color:#66d9ef">end</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read</span>
+        @data<span style="color:#f92672">.</span>last
+    <span style="color:#66d9ef">end</span>
+    
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">push</span>(element)
+        @data <span style="color:#f92672">&lt;&lt;</span> element
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>And than run it again, don&rsquo;t forget to commit and the output should be like this:</p>
+<p><img src="https://hafiztsalavin.space/img/images/tdd/5.png" alt="image"></p>
+<p>Yessss, GREEN!</p>
+<p>The last that stack can remove stack with pop method. Let&rsquo;s adding the test with pop.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">RSpec</span><span style="color:#f92672">.</span>describe <span style="color:#66d9ef">Stack</span> <span style="color:#66d9ef">do</span>
+    it <span style="color:#e6db74">&#39;should return nil when reading an empty stack&#39;</span> <span style="color:#66d9ef">do</span>
+        stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">Stack</span><span style="color:#f92672">.</span>new()
+        expect(stack<span style="color:#f92672">.</span>read)<span style="color:#f92672">.</span>to eq(<span style="color:#66d9ef">nil</span>)
+    <span style="color:#66d9ef">end</span>
+
+    it <span style="color:#e6db74">&#39;should return 1 when reading a stack with data [1]&#39;</span> <span style="color:#66d9ef">do</span>
+        stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">Stack</span><span style="color:#f92672">.</span>new()
+        stack<span style="color:#f92672">.</span>push(<span style="color:#ae81ff">1</span>)
+        expect(stack<span style="color:#f92672">.</span>read)<span style="color:#f92672">.</span>to eq(<span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">end</span>
+
+    it <span style="color:#e6db74">&#39;should return 1 when popping a stack with data [1]&#39;</span> <span style="color:#66d9ef">do</span>
+        stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">Stack</span><span style="color:#f92672">.</span>new()
+        stack<span style="color:#f92672">.</span>push(<span style="color:#ae81ff">1</span>)
+        expect(stack<span style="color:#f92672">.</span>pop)<span style="color:#f92672">.</span>to eq(<span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Run it and make sure the test is failing.</p>
+<p><img src="https://hafiztsalavin.space/img/images/tdd/7.png" alt="image"></p>
+<h3 id="pass-test-2">Pass Test</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Stack</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>
+      @data <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+    <span style="color:#66d9ef">end</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read</span>
+        @data<span style="color:#f92672">.</span>last
+    <span style="color:#66d9ef">end</span>
+    
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">push</span>(element)
+        @data <span style="color:#f92672">&lt;&lt;</span> element
+    <span style="color:#66d9ef">end</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pop</span>
+        @data<span style="color:#f92672">.</span>pop
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Run rspec again we will see our all test cases working fine and everything is green.</p>
+<p><img src="https://hafiztsalavin.space/img/images/tdd/8.png" alt="image"></p>
+<p>You can install <code>tig</code> to look into recent change logs when writing test or writing code to pass it. So, you can check other commits without running the command many times.</p>
+<p><img src="https://hafiztsalavin.space/img/images/tdd/9.png" alt="image"></p>
+<p>That’s it what can i share. Yess of course, this is only short introduction of TDD. Hopefully this helped you to introduction to what the TDD process is like.<br>
+Thank you !!!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Unit Testing with RSpec</title>
+            <link>https://hafiztsalavin.space/posts/2021/07/unit-testing-with-rspec/</link>
+            <pubDate>Thu, 29 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/07/unit-testing-with-rspec/</guid>
+            <description>Hello everyone ! This week, I have been studying unit testing. Maybe you wondering, what is unit testing?
+Actually, unit testing is one of type of Automated Test such as Integration Test and Performance Test. An automated test is separated program that executes components of your main program, and verifies behave as expected.
+Automated test will save a lot of time since we dont need to test the program behavior form A to Z manually.</description>
+            <content type="html"><![CDATA[<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>This week, I have been studying unit testing. Maybe you wondering, what is unit testing?</p>
+<p>Actually, unit testing is one of type of Automated Test such as Integration Test and Performance Test. An automated test is separated program that executes components of your main program, and verifies behave as expected.</p>
+<p>Automated test will save a lot of time since we dont need to test the program behavior form A to Z manually. It is like having your code inspected for bugs from top to bottom, automatically, every time you make change.</p>
+<h4 id="unit-testing">Unit Testing</h4>
+<p>Unit Testing is a method of testing the smallest piece of code called a unit. The main goal is to validate that each unit of the software performs as expected.</p>
+<p>The most important point in Unit Testing, is not to create test cases for everything but to focus on the tests that affect the behavior of the system.
+So, first of all, we need library that we will use to testing. Just open your terminal and run :</p>
+<p><code>gem install rspec</code></p>
+<p>After that, execute <code>rspec --init</code> to initialize your project and rspec will create a folder spec that you can write code for your test. Also include <code>spec_helper.rb</code> for set up testing environment. You can customize but just ignore for now.</p>
+<p>Before write a test, there is several method to set up Rspec for a test:</p>
+<ol>
+<li><code>Describe</code> — describe is a method called on the RSpec module. It can accept a string or even an object class as an argument, and then after that a block describe creates an example group.</li>
+<li><code>It</code> — it creates a specific example to test a functionality.</li>
+<li><code>Expect</code> and <code>Eq</code> — will pair up to describe the specific example we’re testing. They are both methods that take in arguments.</li>
+</ol>
+<p>And usually writing a unit test sometimes is not easy and one of the common methods to helping in writing test is GWT or Given-When-Then template</p>
+<p>For example, we wanted to test a Martabak instance has a taste, we could write like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">RSpec</span><span style="color:#f92672">.</span>describe <span style="color:#66d9ef">Martabak</span> <span style="color:#66d9ef">do</span>
+    it <span style="color:#e6db74">&#39;is delicious&#39;</span> <span style="color:#66d9ef">do</span>
+        <span style="color:#75715e"># given / spesifikasi</span>
+        martabak <span style="color:#f92672">=</span> <span style="color:#66d9ef">Martabak</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#39;cokelat&#39;</span>)
+        
+        <span style="color:#75715e"># when </span>
+        taste <span style="color:#f92672">=</span> martabak<span style="color:#f92672">.</span>taste
+
+        <span style="color:#75715e"># then / ekspektasi</span>
+        expect(taste)<span style="color:#f92672">.</span>to eq(<span style="color:#e6db74">&#34;martabak cokelat is delicious&#34;</span>)
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>GIVEN a context, WHEN some condition and THEN expect some output.
+Lets run with <code>rspec spec/&lt;filename&gt;_spec.rb</code> and the output should be like this:</p>
+<p><img src="https://hafiztsalavin.space/img/images/unit_testing/1.png" alt="image "></p>
+<p>If you looked what is the error message, Rspec tell us the error is very specific. <code>uninitialized constant Martabak</code>, the error tell we that we dont have Martabak class and lets make a Martabak class and run test again.</p>
+<p><img src="https://hafiztsalavin.space/img/images/unit_testing/2.png" alt="image">
+You can look the messages error, very clearly and specific. Lest complete the test with add an initialize method to our Martabak class that takes in a taste.</p>
+<p><img src="https://hafiztsalavin.space/img/images/unit_testing/3.png" alt="image"></p>
+<p>Cool, that pass and now the color changed to green. Its mean the code is pass from the test. And the code of implementation is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Martabak</span>
+    <span style="color:#66d9ef">attr_reader</span> <span style="color:#e6db74">:topping</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(topping)
+        @topping <span style="color:#f92672">=</span> topping
+    <span style="color:#66d9ef">end</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">taste</span>
+        <span style="color:#e6db74">&#34;martabak </span><span style="color:#e6db74">#{</span>@topping<span style="color:#e6db74">}</span><span style="color:#e6db74"> is delicious&#34;</span>
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>I know this is very simple of unit testing but the point is we have learn basic of testing and TDD. So, keep learning!.</p>
+<p>I hope this helped you guys to set up and learn some basic testing with Rspec from what I have learn from my bootcamp and happy testing!</p>
+<p>Thank you!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>MVC using Ruby Sinatra</title>
+            <link>https://hafiztsalavin.space/posts/2021/07/mvc-using-ruby-sinatra/</link>
+            <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/07/mvc-using-ruby-sinatra/</guid>
+            <description>Hello everyone ! This week, I have been studying about one of most favorite design pattern, MVC, with Ruby Sinatra obviously. Actually, Ruby Sinatra doesn’t require to follow Model-View-Controller (MVC) design pattern for application what we will build, but building a MVC application with Sinatra can help learn how to pieces – models, view and controllers – work together. It was exciting and I want to share what I learned.</description>
+            <content type="html"><![CDATA[<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>This week, I have been studying about one of most favorite design pattern, MVC, with Ruby Sinatra obviously. Actually, Ruby Sinatra doesn’t require to follow Model-View-Controller (MVC) design pattern for application what we will build, but building a MVC application with Sinatra can help learn how to pieces – models, view and controllers – work together. It was exciting and I want to share what I learned.</p>
+<p>First things first, imagine we on the restaurant. So, the chef is the model of the application, the waiter is the controller and the view is the customer. The customer cannot directly converse with the chef, just like the views of the application cannot directly talk to the models. This is where controllers come in. The controller takes the information from the user and passes it to the models, the models deal with the database of the application and then send the information back to the controller and then renders to the erb file for the showing to the user.</p>
+<p>So, like what the instructors said, if we want to starting a new project, the key is to think first is what models are you going to have. Lets imagine the simple application that can showing the all of item in database to the view with MVC.</p>
+<p>Before building the application, we want to make sure connection the database. We need install the driver of mysql because we use mysql to the database and in the ruby the name of driver is <code>mysql2</code>. To the installation just run on the terminal:</p>
+<p><code>gem install mysql2</code></p>
+<p>To make sure the connection, we need file ruby to connect to the database. Let say we name it <code>db_connector.rb</code>. Oh ya, we can also use <code>environment variable</code> to the db connection. We can configure it in the file <code>.env</code> and fill it with db information. That suppose if we have an application with many features and each features need access to the database.</p>
+<p>So the connection <code>db_connector.rb</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">require <span style="color:#e6db74">&#39;mysql2&#39;</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_db_client</span>
+    client <span style="color:#f92672">=</span> <span style="color:#66d9ef">Mysql2</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Client</span><span style="color:#f92672">.</span>new(
+    <span style="color:#e6db74">:host</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;localhost&#34;</span>,
+    <span style="color:#e6db74">:username</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">ENV</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#34;DB_USERNAME&#34;</span><span style="color:#f92672">]</span>,
+    <span style="color:#e6db74">:password</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">ENV</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#34;DB_PASSWORD&#34;</span><span style="color:#f92672">]</span>,
+    <span style="color:#e6db74">:database</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">ENV</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#34;DB_NAME&#34;</span><span style="color:#f92672">]</span>
+    )
+    client
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>and the <code>.env</code> you can fill it like this</p>
+<pre><code>export DB_USERNAME=root
+export DB_NAME=food_oms_db
+export DB_PASSWORD=
+</code></pre><p>And execute with <code>source .env</code> on your terminal and than we need routes. To understand routes,  I have share in the previous blog. Sinatra routes allow to field HTTP request from a user browser and send back based on URL a user visited and the type of HTTP request (GET, POST, PUSH etc).</p>
+<p>After everything is done, next we need add the Models, Views and Controller to make application work. I went with one models, two views and a controllers.</p>
+<h4 id="models">MODELS</h4>
+<p>The model is the ‘logic’ of a web application. This is where data is manipulated and/or saved.</p>
+<p>For first method, will return all items with instance variable and second method will insert to the new item to database with query mysql in the <code>clien.query</code>.</p>
+<p>The models that I have is :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">require_relative <span style="color:#e6db74">&#39;../db/db_connector&#39;</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Item</span>
+	<span style="color:#66d9ef">attr_reader</span> <span style="color:#e6db74">:id</span>, <span style="color:#e6db74">:name</span>, <span style="color:#e6db74">:price</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(id, name, price)
+        @id <span style="color:#f92672">=</span> id
+        @name <span style="color:#f92672">=</span> name
+        @price <span style="color:#f92672">=</span> price
+    <span style="color:#66d9ef">end</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">get_all_items</span>
+        client <span style="color:#f92672">=</span> create_db_client
+        rawData <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>query(<span style="color:#e6db74">&#34;select * from items&#34;</span>)
+        items <span style="color:#f92672">=</span> Array<span style="color:#f92672">.</span>new
+        rawData<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>data<span style="color:#f92672">|</span>
+            item <span style="color:#f92672">=</span> <span style="color:#66d9ef">Item</span><span style="color:#f92672">.</span>new(data<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">]</span>, data<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">]</span>, data<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;price&#34;</span><span style="color:#f92672">]</span>)
+            items<span style="color:#f92672">.</span>push(item)
+        <span style="color:#66d9ef">end</span>
+        items
+    <span style="color:#66d9ef">end</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">insert_item</span>(name, price, category)
+        client <span style="color:#f92672">=</span> create_db_client
+        new_item <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>query(<span style="color:#e6db74">&#34;insert into items (name, price) values (&#39;</span><span style="color:#e6db74">#{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;, </span><span style="color:#e6db74">#{</span>price<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>)
+        new_category <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>query(<span style="color:#e6db74">&#34;insert into item_categories (item_id, category_id) values ( LAST_INSERT_ID(), &#39;</span><span style="color:#e6db74">#{</span>category<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;)&#34;</span>)
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+</code></pre></div><h4 id="views">VIEWS</h4>
+<p>This is the user-facing part of a web application or ‘front-end’ — this is the only part of the app that the user interacts with directly. Views generally consist of HTML, CSS, and Javascript. I created two views, one for showing all item and one for form that we add new item.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span>&gt;Daftar Item&lt;<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">table</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;Name&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;Price&lt;/<span style="color:#f92672">th</span>&gt; 
+            &lt;<span style="color:#f92672">th</span>&gt;&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;&lt;/<span style="color:#f92672">th</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+    <span style="color:#960050;background-color:#1e0010">&lt;</span>% items.each do |item|%&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;<span style="color:#960050;background-color:#1e0010">&lt;</span>%= item.name %&gt; &lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;Rp.<span style="color:#960050;background-color:#1e0010">&lt;</span>%= item.price %&gt;&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+    <span style="color:#960050;background-color:#1e0010">&lt;</span>% end %&gt;  
+&lt;/<span style="color:#f92672">table</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/items/new&#34;</span>&gt;Add New Item&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><p>and form with file .erb to create new item</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span>&gt;Create new item &lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/items/create&#34;</span> <span style="color:#a6e22e">method </span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;price&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;price&#34;</span>&gt;
+    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>&gt;add Item&lt;/<span style="color:#f92672">button</span>&gt;
+&lt;/<span style="color:#f92672">form</span>&gt;
+</code></pre></div><h4 id="controllers">CONTROLLERS</h4>
+<p>The controllers are the go-between for models and views. The controller relays data from the browser to the application, and from the application to the browser.</p>
+<p>For first, will call method from model with <code>get_all_items</code> and return will send into views to showing, and in the second method we add the item into database from method <code>insert_item</code> from the models and we redirect in the views from router.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">require <span style="color:#e6db74">&#39;./model/item&#39;</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ItemController</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">items</span>
+    items <span style="color:#f92672">=</span> <span style="color:#66d9ef">Item</span><span style="color:#f92672">::</span>get_all_items
+    renderer <span style="color:#f92672">=</span> <span style="color:#66d9ef">ERB</span><span style="color:#f92672">.</span>new(<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>read(<span style="color:#e6db74">&#34;./views/index.erb&#34;</span>))
+    renderer<span style="color:#f92672">.</span>result(binding)
+    <span style="color:#66d9ef">end</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_item</span>(params)
+        new_item <span style="color:#f92672">=</span> <span style="color:#66d9ef">Item</span><span style="color:#f92672">::</span>insert_item(params<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">]</span>,params<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;price&#34;</span><span style="color:#f92672">]</span>)
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+
+</code></pre></div><p>Hopefully this blog helpful to you when you go on to building an application with the help of sinatra.</p>
+<p>Thank you!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>2nd Weekly Reflection</title>
+            <link>https://hafiztsalavin.space/posts/2021/07/2nd-weekly-reflection/</link>
+            <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/07/2nd-weekly-reflection/</guid>
+            <description>Hello everyone ! Well, second week is passed. I have completed my second week in Generasi Gigih with Back-end track.
+So, in the technical class, we learned about HTTP method, how to use Ruby Sinatra Routing and Rendering, Databases with ERD, how to design an ERD and how to manipulation. Actually, I knew the subject during studied in college, exclude Ruby Sinatra because I haven’t touch Ruby at all before joined the program.</description>
+            <content type="html"><![CDATA[<p><img src="https://hafiztsalavin.space/img/images/ggbanner.png" alt="image"></p>
+<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>Well, second week is passed. I have completed my second week in Generasi Gigih with Back-end track.</p>
+<p>So, in the technical class, we learned about HTTP method, how to use Ruby Sinatra Routing and Rendering, Databases with ERD, how to design an ERD and how to manipulation. Actually, I knew the subject during studied in college, exclude Ruby Sinatra because I haven’t touch Ruby at all before joined the program. But, even I already know the subject, I always excited to learned again and know some new things more deep that I have never learned before. Its makes me feels to stay foolish and hungry to learn more and more.</p>
+<p>Talk my feel this week. For me, its very helpful to recall what I was learned before. I like in this part of DML because I know I weak in this part. But again, homework help me to learn more. The homework is challenging, even doing the homework kill my saturdaynight haha just kidding. And learning basic sinatra, I think I have writing the summarize in my previously blog. My reason writing summarize the topic is if I need remembering what I have learned, just open my blog with topic sinatra. Other than, I got Career Readliness by XL Future Leader that discuss about personal branding, write a good curriculum vitae or resume and Linkedin hacks that I can use to make my profile linkedin better than now.</p>
+<p>Overall I enjoy to learn this part with awesome instructor and recall my knowledge that I have learned before. One things that I get from instructor is <em>trying to practice the knowledge and more practice a skill is make faster develop expertise</em>. Thank you!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Ruby Sinatra and Routes</title>
+            <link>https://hafiztsalavin.space/posts/2021/07/ruby-sinatra-and-routes/</link>
+            <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/07/ruby-sinatra-and-routes/</guid>
+            <description>Hello everyone ! In this blog I want to share basic routes with Ruby Sinatra. Last weeks I have been studying Sinatra, so first question is &amp;hellip;
+What is Ruby Sinatra??? First of all, sinatra is a free and open source software web application library and domain-specific language written in Ruby. It is an alternative to other Ruby web application frameworks such as Ruby on Rails. And web service can be made from sinatra.</description>
+            <content type="html"><![CDATA[<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>In this blog I want to share basic routes with Ruby Sinatra.
+Last weeks I have been studying Sinatra, so first question is &hellip;</p>
+<h3 id="what-is-ruby-sinatra">What is Ruby Sinatra???</h3>
+<p>First of all, sinatra is a free and open source software web application library and domain-specific language written in Ruby. It is an alternative to other Ruby web application frameworks such as Ruby on Rails. And web service can be made from sinatra. Web service can be used to transfer data between web application or other application such as mobile application.</p>
+<h3 id="installation">Installation</h3>
+<p>Open your terminal and run :</p>
+<p><code>gem install sinatra</code></p>
+<p>And add any file that need Sinatara using <code>require 'sinatra'</code></p>
+<h3 id="the-relationship-between-sinatra-and-http-method-to-create-web-service">The relationship between sinatra and http method to create web service?</h3>
+<p>Oke, by using sinatra routes (which is include HTTP method in needed) its enable to establish HTTP request-respond cycle needed in order to create a web service. One of architectural style using HTTP method is REST API for creating Web Service. The point is Rest Client will access to the Rest Server with URL and will be return from Rest Sever usually with text format, JSON or XML. The most popular return from Rest Server is JSON.</p>
+<p>REST API Routing started with URL (Uniform Resource Locator) or commonly refered as web address/path. And than Rest convention gives a blueprint of making the basic routes for CRUD (Create, Read, Update, Delete) functionality in a uniform way.</p>
+<p>Most popular HTTP Method usually using in REST API is <code>GET</code> <code>POST</code> <code>PUT</code> <code>DELETE</code>. Obviously so many method from http but i will use the popular HTTP method.
+For example:</p>
+<ul>
+<li>Index <code>Get</code> /orders returns list of all orders</li>
+<li>Show <code>Get</code> /orders/:id  <code>Get</code> /orders/123 returns order with id 123</li>
+<li>Create <code>Post</code> /order creates a new order, returns order or confirmation</li>
+<li>Update <code>Put</code> /orders/123  updated orders with id 123</li>
+<li>Destroy <code>Delete</code> /orders/123   Deletes order with id 123</li>
+</ul>
+<p>Here i&rsquo;ll explain routing sinatra work and how work with method <code>get</code> because basicly <code>get</code> is to read data/resource.</p>
+<p>Lets imagine we have an Item class that exists in <code>Item.rb</code> and Item class will have access like <code>.get_all_item</code> which get all data from databases. We will take 2 routes, one for all the items and one for for specific instance of the item. It will be:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">get <span style="color:#e6db74">&#39;/item&#39;</span> <span style="color:#66d9ef">do</span>
+    @item <span style="color:#f92672">=</span> <span style="color:#66d9ef">Item</span><span style="color:#f92672">.</span>all
+    <span style="color:#e6db74">erb</span>: index
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>and</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">get <span style="color:#e6db74">&#39;/item/:id&#39;</span> <span style="color:#66d9ef">do</span>
+    @item <span style="color:#f92672">=</span> <span style="color:#66d9ef">Item</span><span style="color:#f92672">.</span>find_by(id: params<span style="color:#f92672">[</span><span style="color:#e6db74">:id</span><span style="color:#f92672">]</span>)
+    <span style="color:#e6db74">erb</span>: show
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>For first method will excute method <code>all</code> in the class <code>Item.rb</code> and will return with instance variable that will be transferred to the <code>index.erb</code> file, and the <code>index.erb</code> file will be show the list all the instances.</p>
+<p><code>.erb</code> is a method that shows the response to user. Its mean whenever you see you will just be showing to the user with <code>erb</code> also you want to use as an input from the form, you can showing page with <code>.erb</code> to show the form.</p>
+<p>And the second, method will be showing a specific instance of Item with <code>id</code> value from URL through the <code>params</code> method and will be showing in the <code>show.erb</code>.</p>
+<p>&hellip;</p>
+<p>Currently, only this what can i share and so far usually i using method <code>GET</code> and <code>POST</code>. And understanding how the http request-respond cycle work was important to build web service dude, so keep learning.</p>
+<p>Thank you!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>1st Weekly Reflection</title>
+            <link>https://hafiztsalavin.space/posts/2021/07/1st-weekly-reflection/</link>
+            <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/07/1st-weekly-reflection/</guid>
+            <description>Hello everyone ! First weeks is done. My feels like afraid and excited at the same time. Afraid because I afraid if I not able to keep up with the lesson and excited because the curriculum is very good and interesting. But to be honest, I am little bit nervous in english class. There are so many people fluent in english. For me as a beginner in english, I have learned a lot like how to speak daily conversation and little bit about grammar, so grateful.</description>
+            <content type="html"><![CDATA[<p><img src="https://hafiztsalavin.space/img/images/ggbanner.png" alt="image"></p>
+<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>First weeks is done. My feels like afraid and excited at the same time. Afraid because I afraid if I not able to keep up with the lesson and excited because the curriculum is very good and interesting. But to be honest, I am little bit nervous in english class. There are so many people fluent in english. For me as a beginner in english, I have learned a lot like how to speak daily conversation and little bit about grammar, so grateful.</p>
+<p>Anyway, at the technical class, we learn about Object Oriented Programming or OOP with Ruby. Obviously we use Ruby for the main programming languages in this bootcamp. So far the materials I have got in the college but not deep.  I think it will be quiet clear to me to able understand the materials when I heard the explanations from the instructors. But to be honest, I have learned a lot of new things from the materials. A lot of materials that I had never known before.</p>
+<p>But, the nervousness came while the showcase time, so many students raise hand so fast while the showcase time is started. Even showcase homework or showcase exercise during classes. At the same time, this is make me wondering to myself, how so many people so fast when the instructors given the exercise. Made me realize that I have to sharpen my coding skill especially in the understanding the problem with combine writing code fastness.</p>
+<p>Well, from what I learned last week, I think the most important thing to learn is a fundamental 	and basic how to solve the problems (I think understanding the problem is first before crack the problem). And last of my reflection is, communication skill as important as problem solving, especially communication with english. We as a software engineer should be able to explained the problem also communicate it. Thank you!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Intermediate Level Generasi Gigih</title>
+            <link>https://hafiztsalavin.space/posts/2021/07/intermediate-level-generasi-gigih/</link>
+            <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/07/intermediate-level-generasi-gigih/</guid>
+            <description>Hello everyone ! Since May 11 2021, I have been accepted as a participants at Generasi Gigih – Back End Engineeer Path from Yayasan Anak Bangsa Bisa. And today I was receive email from generasi gigih that I moving to the next round of generasi gigih program which is the intermediate level. I was very happy because in the intermediate level we will learn more deeper about concepts and fundamentals about backend engineering from engineer gojek, directly.</description>
+            <content type="html"><![CDATA[<p><img src="https://hafiztsalavin.space/img/images/yabb.jpeg" alt="image"></p>
+<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>Since May 11 2021, I have been accepted as a participants at Generasi Gigih – Back End Engineeer Path from Yayasan Anak Bangsa Bisa. And today I was receive email from generasi gigih that I moving to the next round of generasi gigih program which is the intermediate level. I was very happy because in the intermediate level we will learn more deeper about concepts and fundamentals about backend engineering from engineer gojek, directly.  Amazing. The intermediate phase starts on Monday 5 July 2021.</p>
+<p>So first of all, I’ll explain what is Generasi Gigih by Yayasan Anak Bangsa Bisa.  Yayasan Anak Bangsa Bisa is a non-profit organization founded by Gojek. YABB is committed to help society build back better. And Generasi Gigih is a bootcamp that was designed as a breakthrough for Indonesia’s young tech talent to catch up with the fast-paced tech industry with the right skill and mindset. I picked the Backend Engineer track and I learn fundamental of backend engineering with Ruby.</p>
+<p>Previously, I passed the first stage as self learning with progate, cakap and XL future leader. I have learned basic Ruby, SQL etc with material related with backend engineering, and than with cakap I learn fundamental of software engineering communication with english obviously. With XL Future leader I learn tips and trick to growth mindset and personal branding, both cakap and XL Future leader as giving as a materials for soft skill. We also had the opportunity to join a webinar to hear stories and discuss from the great people at Gojek such as Aleisha Fiona, Opan Mustopah, and CEO of gojek Kevin Aluwi.</p>
+<p>Well, maybe for next 2 month. This blog will be filling my journey and notes materials.
+Thank you!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Introduction my blog</title>
+            <link>https://hafiztsalavin.space/posts/2021/04/introduction-my-blog/</link>
+            <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.space/posts/2021/04/introduction-my-blog/</guid>
+            <description>Hello everyone ! This is my first blog. I realize I’m years late to the game. I finally now have time to write about stuff.
+My purpose why I build blog is to share about what I have been working on, what I have learned, things I have found interesting, insights into how I make and maintain my projects, etc.
+Also, my blog is my media to learn how to write in english correctly, so if find something missing in my post, please don’t be hesitate to contact me.</description>
+            <content type="html"><![CDATA[<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>This is my first blog. I realize I’m years late to the game. I finally now have time to write about stuff.</p>
+<p>My purpose why I build blog is to share about what I have been working on, what I have learned, things I have found interesting, insights into how I make and maintain my projects, etc.</p>
+<p>Also, my blog is my media to learn how to write in english correctly, so if find something missing in my post,  please don’t be hesitate to contact me.</p>
+<p>Cheers and happy reading! Thank You!</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

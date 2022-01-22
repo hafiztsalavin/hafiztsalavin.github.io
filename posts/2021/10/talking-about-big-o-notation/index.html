@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="map[name:Hafiz Tsalavin]">
+<meta name="description" content="Hello everyone ! After few week ago break to writing a blog and trying to re-learn about Data Structures and Algorithms, here I would like to share one thing that I think is important to how analysis performance some algorithms, ya Big-O notation (read with an O, not a zero). Honestly, there are so many method to analyze performance some algorithm, but here I only share the most method that we usually use to analyze an algorithm." />
+<meta name="keywords" content=", learning, algorithms, data structure" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://hafiztsalavin.space/posts/2021/10/talking-about-big-o-notation/" />
+
+
+    <title>
+        
+            Talking about Big O Notation :: Hafiz Tsalavin 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://hafiztsalavin.space/main.aaa4299e94595dfb127122d343244362acc9c8619cdf790b520723c2c8071d90.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://hafiztsalavin.space/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://hafiztsalavin.space/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://hafiztsalavin.space/favicon-16x16.png">
+    <link rel="manifest" href="https://hafiztsalavin.space/site.webmanifest">
+    <link rel="mask-icon" href="https://hafiztsalavin.space/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="https://hafiztsalavin.space/favicon.ico">
+    <meta name="msapplication-TileColor" content="#1b1c1d">
+    <meta name="theme-color" content="#1b1c1d">
+
+
+
+<meta itemprop="name" content="Talking about Big O Notation">
+<meta itemprop="description" content="Hello everyone ! After few week ago break to writing a blog and trying to re-learn about Data Structures and Algorithms, here I would like to share one thing that I think is important to how analysis performance some algorithms, ya Big-O notation (read with an O, not a zero). Honestly, there are so many method to analyze performance some algorithm, but here I only share the most method that we usually use to analyze an algorithm.">
+<meta itemprop="datePublished" content="2021-10-20T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-10-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1288">
+<meta itemprop="image" content="https://hafiztsalavin.space/"/>
+
+
+
+<meta itemprop="keywords" content="learning,algorithms,data structure," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hafiztsalavin.space/"/>
+
+<meta name="twitter:title" content="Talking about Big O Notation"/>
+<meta name="twitter:description" content="Hello everyone ! After few week ago break to writing a blog and trying to re-learn about Data Structures and Algorithms, here I would like to share one thing that I think is important to how analysis performance some algorithms, ya Big-O notation (read with an O, not a zero). Honestly, there are so many method to analyze performance some algorithm, but here I only share the most method that we usually use to analyze an algorithm."/>
+
+
+
+
+
+
+    <meta property="article:section" content="Development" />
+
+
+
+    <meta property="article:published_time" content="2021-10-20 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://hafiztsalavin.space/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text">_ cd /hafiztsalavin/</span>
+            <span class="logo__cursor" style=
+                  "visibility:hidden;
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://hafiztsalavin.space/about/">About</a></li><li><a href="https://hafiztsalavin.space/posts/">All Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+
+<div>
+  
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        7 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://hafiztsalavin.space/posts/2021/10/talking-about-big-o-notation/">Talking about Big O Notation</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div style="text-align: justify;" class="post-content">
+        <h3 id="hello-everyone-">Hello everyone !</h3>
+<p>After few week ago break to writing a blog and trying to re-learn about Data Structures and Algorithms, here I would like to share one thing that I think is important to how analysis performance some algorithms, ya Big-O notation <strong>(read with an O, not a zero)</strong>. Honestly, there are so many method to analyze performance some algorithm, but here I only share the most method that we usually use to analyze an algorithm. We often use Big-O notation as a simple way to describe the speed or approximate run time of an algorithm, that’s why we always should be taking Big-O to consideration when we are writing algorithm.</p>
+<p>Actually, I write this blog is based on books that I am read recently, <code>“Data Structure and Algorithms”</code> by Hemant Jain. You can choose another language, because I am currently having develop with Ruby, so I choose Ruby for a programming language.</p>
+<p>Before we jump into concept of Big-O Notation, we have to ensure <strong>“what is an Algorithms”</strong> itself. From the books is :</p>
+<blockquote>
+<p>“algorithm is a set of steps to accomplish as task or an algorithm in a computer program in which a set of steps applied over a set of input to produce a set of output”.</p>
+</blockquote>
+<p>Simply put, it is a set of instructions for completing some task. Data structure is just some ways to store information in computer and algorithms use to manipulate the data.</p>
+<p>Anyway, there are most important properties before we are writing an algorithm is:</p>
+<ol>
+<li><strong>Correctness</strong> – its means when you are trying to solve problem with algorithm please make sure that the algorithm is correct and able to process all given input and provide correct output.</li>
+<li><strong>Efficiency</strong> – its means the algorithm should be efficient to solve problems. Efficiency measured in two parameters, first is <strong>Time-Complexity</strong> and second is <strong>Space-Complexity</strong>.</li>
+</ol>
+<p><strong>Time-Complexity</strong> is every or each algorithm certain needed of time to run or complete to provided the result or in other words how to quick result provided by the algorithm.</p>
+<p><strong>Space-Complexity</strong> is how much additional memory or storage of your algorithm consume to give the result. But here, I make boundaries in this article that we just discuss about Time-Complexity.</p>
+<p>So, what is exactly <strong>Big-O notations?</strong> Big-O  is used to describe performance of an algorithm, or in other words we use Big-O to measured how efficient our algorithm run that represent <strong>time complexity</strong>. We use it as a tool to compare algorithm to other algorithm.</p>
+<p>For more details, you can see the graph below. The graph will be explain relationship between time and input size.</p>
+<p><img src="https://hafiztsalavin.space/img/images/bigo_cheatsheet.png" alt="image "></p>
+<p>source: <a href="https://www.bigocheatsheet.com/">Big O Cheat Sheet</a>.</p>
+<p>As you can see, there are <strong>two main things to calculating the Big-O of an algorithms</strong>, number of operations (complexity or time) and number of input size. I sure that you wondering what is relationship between them (time and input).  Actually, to find out best algorithm it’s depends on the input size. We want to keep our time or operations as low as possible also to be as efficient as possible while the size of our data increases. It’s important to avoid red zone if possible.</p>
+<p>There are common time complexities, from fastest to slowest.</p>
+<table>
+<thead>
+<tr>
+<th>Notation</th>
+<th>Complexity</th>
+<th>Rate of growth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O(1)</td>
+<td>Constant</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td>O(log n)</td>
+<td>Logarithmic</td>
+<td></td>
+</tr>
+<tr>
+<td>O(n)</td>
+<td>Linear</td>
+<td></td>
+</tr>
+<tr>
+<td>O(n log n)</td>
+<td>Log Linear</td>
+<td></td>
+</tr>
+<tr>
+<td>O(n²)</td>
+<td>Quadratic</td>
+<td>Slow</td>
+</tr>
+</tbody>
+</table>
+<p>Lets break down about the different notations of Big-O one by one and all examples are write in ruby.</p>
+<h3 id="constant-time-o1">Constant Time: O(1)</h3>
+<blockquote>
+<p>An algorithm that given input of n size and only takes a single step for the algorithm. That’s why called constant, because the algorithm will always run at a constant time.</p>
+</blockquote>
+<p>For examples</p>
+<ul>
+<li>If we want to accessing x element of an array, the run time will be constant or O(1).</li>
+<li>Push and pop of a stack.</li>
+<li>Accessing an element of Hash-Table or Dictionary.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">show_array</span>(arr)
+	puts <span style="color:#960050;background-color:#1e0010">“</span><span style="color:#75715e">#{arr[0]}”</span>
+<span style="color:#66d9ef">end</span>
+
+arr <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">12</span><span style="color:#f92672">]</span>
+show_array(arr)
+</code></pre></div><p>The reason the runtime of this method is O(1) is no matter how big the array, the number of operations doesn’t change.</p>
+<h3 id="logarithmic-time-olog-----n">Logarithmic Time: O(log     n)</h3>
+<blockquote>
+<p>An algorithm that given an input of size n, the number of steps it takes to accomplish the task are decreased by some factor with each step.</p>
+</blockquote>
+<p>The most common example that used logarithmic time is binary search. Basically, binary search is an algorithm to search some position in an array by elimination a half of input array to find out the position. We have to make sure that the array input have sorted before. Actually, to understand the binary search we have to know the concept of recursive function.</p>
+<p>Lets take a look the example below for binary search.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search</span>(arr, target)
+	search_rekursif(arr, <span style="color:#ae81ff">0</span>, arr<span style="color:#f92672">.</span>length<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target )
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search_rekursif</span>(arr, low, high, target)
+	<span style="color:#66d9ef">if</span> low <span style="color:#f92672">&gt;</span> high
+		<span style="color:#66d9ef">return</span> print <span style="color:#e6db74">&#39;Cannot find the target&#39;</span>  
+    <span style="color:#66d9ef">end</span>
+
+	mid <span style="color:#f92672">=</span> low <span style="color:#f92672">+</span>(high<span style="color:#f92672">-</span>low)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+	<span style="color:#66d9ef">if</span> arr<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> target
+		<span style="color:#66d9ef">return</span> print mid
+	<span style="color:#66d9ef">elsif</span> arr<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> target
+		<span style="color:#66d9ef">return</span> search_rekursif(arr, mid <span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, high, target)
+	<span style="color:#66d9ef">else</span>
+		<span style="color:#66d9ef">return</span> search_rekursif(arr, low, mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target)
+	<span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+arr <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">12</span><span style="color:#f92672">]</span>
+target <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>
+search(arr,target)
+</code></pre></div><p>As you can see, we will find where the position of the target with return location on the arrays input. We start in the function search that will be call function search_recursive.</p>
+<p>First, we have to ensure the middle of the array, and than we compare middle value with target value, will be greater or smaller than the middle value. The middle will be minus one if the target value is smaller than middle value, that’s means the target value in the range middle to down. Otherwise, the middle will be plus one if the target is greater than middle value. This is done until match is found.</p>
+<h3 id="linear-time-on">Linear Time: O(n)</h3>
+<blockquote>
+<p>An algorithm is said to run in linear time if the execution time of the algorithm is directly proportional to the input size.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">show_all</span>(items)
+	items<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>item<span style="color:#f92672">|</span>
+		print item		
+	<span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>As you can see, we have to see/traverse all items one by one to print out all items. An array with size lets say 10, so the method will be take 10 iterations, so as an input increases, runtime will be also increases.</p>
+<h3 id="loglinear-on-log-n">LogLinear: O(n log n)</h3>
+<blockquote>
+<p>An algorithm is said to run in logarithmic time if the execution time of an algorithm is proportional to the product of input size and logarithm of the input size.</p>
+</blockquote>
+<p>Actually, good example to log linear is a quicksort algorithm. But talk this algorithm is different part. I only give a example to imagine loglinear, if you have 10 size or array than you want to sorting, the time complexity only 20 time complexity. Sounds good but quicksort is special kind of algorithm, quicksort will be O(n log n) with average case but with worse case will be O(n²).</p>
+<h3 id="quadratic-runtime-on">Quadratic Runtime: O(n²)</h3>
+<blockquote>
+<p>An algorithm that given input of size n, the number of steps it takes to accomplish a task is square of n.</p>
+</blockquote>
+<p>Bubble sort, selection sort and insertion sort is examples for O(n²).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_all</span>(arrays)
+	arrays<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>array_1<span style="color:#f92672">|</span>
+		arrays<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>array_2<span style="color:#f92672">|</span>
+			print <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>array_1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>array_2<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>			
+		<span style="color:#66d9ef">end</span>		
+	<span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+arrays <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span><span style="color:#f92672">]</span>
+print_all(arr)
+</code></pre></div><p>As you can see, there is have loop inside loop or a nested loop. You can imagine if size of input let say 10 and will take 100 iteration. That’s why called exponential runtime because the loop has to square the amount of iteration based on the input size. That it.</p>
+<p>Well, with understand of concept Big-O notation we will easily to looks <code>which one is the best?</code> and <code>which one is more efficient to solve problems?</code></p>
+<p>I would like to thank you for reading. I hope you have learned something new or this post can help you to introduce what is Big-O.</p>
+<p>Thank you !!!</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://hafiztsalavin.space/tags/learning/">learning</a></span>
+        <span class="tag"><a href="https://hafiztsalavin.space/tags/algorithms/">algorithms</a></span>
+        <span class="tag"><a href="https://hafiztsalavin.space/tags/data-structure/">data structure</a></span>
+        
+    </p>
+
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+
+        <span class="tag"><a href="https://hafiztsalavin.space/categories/development/">Development</a></span>
+        
+    </p>
+
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        1288 Words
+      </p>
+
+      <p> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2021-10-20
+        
+
+         
+          
+        
+      </p>
+    </div>
+
+    
+    <div class="pagination">
+        <div class="pagination__title">
+            <span class="pagination__title-h"></span>
+            <hr />
+        </div>
+
+        <div class="pagination__buttons">
+            
+
+            
+            <span class="button next">
+                <a href="https://hafiztsalavin.space/posts/2021/08/final-reflection-i-am-growth/">
+                    <span class="button__text">Final Reflection: I AM GROWTH</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2022</span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span><span>Made with &#10084; by <a href="https://github.com/hafiztsalavin">Hafiz Tsalavin</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="https://hafiztsalavin.space/bundle.min.ace63d93098bf623f7c286a9084a4c22bfc482944c734f87fe0b685c7c6c7fa0ad2edb028c3b4b60d3343720c8ab490b320ad7f8edf4f6e9a6b898fc529057a9.js" integrity="sha512-rOY9kwmL9iP3woapCEpMIr/EgpRMc0&#43;H/gtoXHxsf6CtLtsCjDtLYNM0NyDIq0kLMgrX&#43;O309ummuJj8UpBXqQ=="></script>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="map[name:Hafiz Tsalavin]">
+<meta name="description" content="Hello everyone ! This week, I have been studying unit testing. Maybe you wondering, what is unit testing?
+Actually, unit testing is one of type of Automated Test such as Integration Test and Performance Test. An automated test is separated program that executes components of your main program, and verifies behave as expected.
+Automated test will save a lot of time since we dont need to test the program behavior form A to Z manually." />
+<meta name="keywords" content=", learning, bootcamp" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://hafiztsalavin.space/posts/2021/07/unit-testing-with-rspec/" />
+
+
+    <title>
+        
+            Unit Testing with RSpec :: Hafiz Tsalavin 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://hafiztsalavin.space/main.aaa4299e94595dfb127122d343244362acc9c8619cdf790b520723c2c8071d90.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://hafiztsalavin.space/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://hafiztsalavin.space/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://hafiztsalavin.space/favicon-16x16.png">
+    <link rel="manifest" href="https://hafiztsalavin.space/site.webmanifest">
+    <link rel="mask-icon" href="https://hafiztsalavin.space/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="https://hafiztsalavin.space/favicon.ico">
+    <meta name="msapplication-TileColor" content="#1b1c1d">
+    <meta name="theme-color" content="#1b1c1d">
+
+
+
+<meta itemprop="name" content="Unit Testing with RSpec">
+<meta itemprop="description" content="Hello everyone ! This week, I have been studying unit testing. Maybe you wondering, what is unit testing?
+Actually, unit testing is one of type of Automated Test such as Integration Test and Performance Test. An automated test is separated program that executes components of your main program, and verifies behave as expected.
+Automated test will save a lot of time since we dont need to test the program behavior form A to Z manually.">
+<meta itemprop="datePublished" content="2021-07-29T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-07-29T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="558">
+<meta itemprop="image" content="https://hafiztsalavin.space/"/>
+
+
+
+<meta itemprop="keywords" content="learning,bootcamp," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hafiztsalavin.space/"/>
+
+<meta name="twitter:title" content="Unit Testing with RSpec"/>
+<meta name="twitter:description" content="Hello everyone ! This week, I have been studying unit testing. Maybe you wondering, what is unit testing?
+Actually, unit testing is one of type of Automated Test such as Integration Test and Performance Test. An automated test is separated program that executes components of your main program, and verifies behave as expected.
+Automated test will save a lot of time since we dont need to test the program behavior form A to Z manually."/>
+
+
+
+
+
+
+    <meta property="article:section" content="Development" />
+
+
+
+    <meta property="article:published_time" content="2021-07-29 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://hafiztsalavin.space/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text">_ cd /hafiztsalavin/</span>
+            <span class="logo__cursor" style=
+                  "visibility:hidden;
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://hafiztsalavin.space/about/">About</a></li><li><a href="https://hafiztsalavin.space/posts/">All Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+
+<div>
+  
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        3 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://hafiztsalavin.space/posts/2021/07/unit-testing-with-rspec/">Unit Testing with RSpec</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div style="text-align: justify;" class="post-content">
+        <h3 id="hello-everyone-">Hello everyone !</h3>
+<p>This week, I have been studying unit testing. Maybe you wondering, what is unit testing?</p>
+<p>Actually, unit testing is one of type of Automated Test such as Integration Test and Performance Test. An automated test is separated program that executes components of your main program, and verifies behave as expected.</p>
+<p>Automated test will save a lot of time since we dont need to test the program behavior form A to Z manually. It is like having your code inspected for bugs from top to bottom, automatically, every time you make change.</p>
+<h4 id="unit-testing">Unit Testing</h4>
+<p>Unit Testing is a method of testing the smallest piece of code called a unit. The main goal is to validate that each unit of the software performs as expected.</p>
+<p>The most important point in Unit Testing, is not to create test cases for everything but to focus on the tests that affect the behavior of the system.
+So, first of all, we need library that we will use to testing. Just open your terminal and run :</p>
+<p><code>gem install rspec</code></p>
+<p>After that, execute <code>rspec --init</code> to initialize your project and rspec will create a folder spec that you can write code for your test. Also include <code>spec_helper.rb</code> for set up testing environment. You can customize but just ignore for now.</p>
+<p>Before write a test, there is several method to set up Rspec for a test:</p>
+<ol>
+<li><code>Describe</code> — describe is a method called on the RSpec module. It can accept a string or even an object class as an argument, and then after that a block describe creates an example group.</li>
+<li><code>It</code> — it creates a specific example to test a functionality.</li>
+<li><code>Expect</code> and <code>Eq</code> — will pair up to describe the specific example we’re testing. They are both methods that take in arguments.</li>
+</ol>
+<p>And usually writing a unit test sometimes is not easy and one of the common methods to helping in writing test is GWT or Given-When-Then template</p>
+<p>For example, we wanted to test a Martabak instance has a taste, we could write like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">RSpec</span><span style="color:#f92672">.</span>describe <span style="color:#66d9ef">Martabak</span> <span style="color:#66d9ef">do</span>
+    it <span style="color:#e6db74">&#39;is delicious&#39;</span> <span style="color:#66d9ef">do</span>
+        <span style="color:#75715e"># given / spesifikasi</span>
+        martabak <span style="color:#f92672">=</span> <span style="color:#66d9ef">Martabak</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#39;cokelat&#39;</span>)
+        
+        <span style="color:#75715e"># when </span>
+        taste <span style="color:#f92672">=</span> martabak<span style="color:#f92672">.</span>taste
+
+        <span style="color:#75715e"># then / ekspektasi</span>
+        expect(taste)<span style="color:#f92672">.</span>to eq(<span style="color:#e6db74">&#34;martabak cokelat is delicious&#34;</span>)
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>GIVEN a context, WHEN some condition and THEN expect some output.
+Lets run with <code>rspec spec/&lt;filename&gt;_spec.rb</code> and the output should be like this:</p>
+<p><img src="https://hafiztsalavin.space/img/images/unit_testing/1.png" alt="image "></p>
+<p>If you looked what is the error message, Rspec tell us the error is very specific. <code>uninitialized constant Martabak</code>, the error tell we that we dont have Martabak class and lets make a Martabak class and run test again.</p>
+<p><img src="https://hafiztsalavin.space/img/images/unit_testing/2.png" alt="image">
+You can look the messages error, very clearly and specific. Lest complete the test with add an initialize method to our Martabak class that takes in a taste.</p>
+<p><img src="https://hafiztsalavin.space/img/images/unit_testing/3.png" alt="image"></p>
+<p>Cool, that pass and now the color changed to green. Its mean the code is pass from the test. And the code of implementation is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Martabak</span>
+    <span style="color:#66d9ef">attr_reader</span> <span style="color:#e6db74">:topping</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(topping)
+        @topping <span style="color:#f92672">=</span> topping
+    <span style="color:#66d9ef">end</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">taste</span>
+        <span style="color:#e6db74">&#34;martabak </span><span style="color:#e6db74">#{</span>@topping<span style="color:#e6db74">}</span><span style="color:#e6db74"> is delicious&#34;</span>
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>I know this is very simple of unit testing but the point is we have learn basic of testing and TDD. So, keep learning!.</p>
+<p>I hope this helped you guys to set up and learn some basic testing with Rspec from what I have learn from my bootcamp and happy testing!</p>
+<p>Thank you!</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://hafiztsalavin.space/tags/learning/">learning</a></span>
+        <span class="tag"><a href="https://hafiztsalavin.space/tags/bootcamp/">bootcamp</a></span>
+        
+    </p>
+
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+
+        <span class="tag"><a href="https://hafiztsalavin.space/categories/development/">Development</a></span>
+        
+    </p>
+
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        558 Words
+      </p>
+
+      <p> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2021-07-29
+        
+
+         
+          
+        
+      </p>
+    </div>
+
+    
+    <div class="pagination">
+        <div class="pagination__title">
+            <span class="pagination__title-h"></span>
+            <hr />
+        </div>
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://hafiztsalavin.space/posts/2021/07/test-driven-development/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">Test Driven Development</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="https://hafiztsalavin.space/posts/2021/07/mvc-using-ruby-sinatra/">
+                    <span class="button__text">MVC using Ruby Sinatra</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2022</span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span><span>Made with &#10084; by <a href="https://github.com/hafiztsalavin">Hafiz Tsalavin</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="https://hafiztsalavin.space/bundle.min.ace63d93098bf623f7c286a9084a4c22bfc482944c734f87fe0b685c7c6c7fa0ad2edb028c3b4b60d3343720c8ab490b320ad7f8edf4f6e9a6b898fc529057a9.js" integrity="sha512-rOY9kwmL9iP3woapCEpMIr/EgpRMc0&#43;H/gtoXHxsf6CtLtsCjDtLYNM0NyDIq0kLMgrX&#43;O309ummuJj8UpBXqQ=="></script>
+
+
+
+    </body>
+</html>
