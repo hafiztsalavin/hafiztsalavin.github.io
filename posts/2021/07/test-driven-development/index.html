@@ -174,7 +174,7 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
 <p>After the test is success, we dont need to continue the code, instead we proceed to make the next failing test.</p>
 <h3 id="cycle-of-tdd">Cycle of TDD</h3>
 <p>To make easy, lets imagine the cycle of TDD. When you are doing TDD, just looked the cycle.</p>
-<!-- raw HTML omitted -->
+<p><img src="https://hafiztsalavin.com/img/images/tdd/rgb.png" alt="image"></p>
 <ul>
 <li>First is write test code to make it fail</li>
 <li>Second, just writing code to make that test work.</li>
@@ -197,7 +197,7 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
     <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>Run <code>rspec</code> and the test is failing.</p>
-<!-- raw HTML omitted -->
+<p><img src="https://hafiztsalavin.com/img/images/tdd/3.png" alt="image"></p>
 <p>Message error <code>uninitialized constant Stack</code>, they tell us that Stack class not defined.</p>
 <h3 id="pass-test">Pass Test</h3>
 <p>Now, start writing code and try to pass that test. Just enough to make that test pass. Not more code.</p>
@@ -211,7 +211,7 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
     <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>And than run it again. Don&rsquo;t forget to commit after pass the test to see what we have to pass the test.</p>
-<!-- raw HTML omitted -->
+<p><img src="https://hafiztsalavin.com/img/images/tdd/2.png" alt="image"></p>
 <p>Yeay cool.</p>
 <h3 id="repeat-the-process-for-the-next-unit-tes">Repeat the process for the next unit tes</h3>
 <p>We remember that stack have push after we can read it. Lets make the test that we push 1 and read it.</p>
@@ -228,7 +228,7 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
     <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>Run with <code>rspec -fd</code> and we can see message error like this:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://hafiztsalavin.com/img/images/tdd/4.png" alt="image"></p>
 <p>With <code>rpech -fd</code>, we can see that the first test is pass but second test is failing.</p>
 <h3 id="pass-test-1">Pass Test</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Stack</span>
@@ -245,7 +245,7 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
     <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>And than run it again, don&rsquo;t forget to commit and the output should be like this:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://hafiztsalavin.com/img/images/tdd/5.png" alt="image"></p>
 <p>Yessss, GREEN!</p>
 <p>The last that stack can remove stack with pop method. Let&rsquo;s adding the test with pop.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">RSpec</span><span style="color:#f92672">.</span>describe <span style="color:#66d9ef">Stack</span> <span style="color:#66d9ef">do</span>
@@ -267,7 +267,7 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
     <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>Run it and make sure the test is failing.</p>
-<!-- raw HTML omitted -->
+<p><img src="https://hafiztsalavin.com/img/images/tdd/7.png" alt="image"></p>
 <h3 id="pass-test-2">Pass Test</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Stack</span>
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>
@@ -287,9 +287,9 @@ TDD is acronym of Test Driven Development, basically is a development strategy i
     <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>Run rspec again we will see our all test cases working fine and everything is green.</p>
-<!-- raw HTML omitted -->
+<p><img src="https://hafiztsalavin.com/img/images/tdd/8.png" alt="image"></p>
 <p>You can install <code>tig</code> to look into recent change logs when writing test or writing code to pass it. So, you can check other commits without running the command many times.</p>
-<!-- raw HTML omitted -->
+<p><img src="https://hafiztsalavin.com/img/images/tdd/9.png" alt="image"></p>
 <p>That’s it what can i share. Yess of course, this is only short introduction of TDD. Hopefully this helped you to introduction to what the TDD process is like.<br>
 Thank you !!!</p>
 

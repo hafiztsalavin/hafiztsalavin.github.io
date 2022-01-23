@@ -189,11 +189,11 @@ So, first of all, we need library that we will use to testing. Just open your te
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>GIVEN a context, WHEN some condition and THEN expect some output.
 Lets run with <code>rspec spec/&lt;filename&gt;_spec.rb</code> and the output should be like this:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://hafiztsalavin.com/img/images/unit_testing/1.png" alt="image "></p>
 <p>If you looked what is the error message, Rspec tell us the error is very specific. <code>uninitialized constant Martabak</code>, the error tell we that we dont have Martabak class and lets make a Martabak class and run test again.</p>
-<!-- raw HTML omitted -->
-<p>You can look the messages error, very clearly and specific. Lest complete the test with add an initialize method to our Martabak class that takes in a taste.</p>
-<!-- raw HTML omitted -->
+<p><img src="https://hafiztsalavin.com/img/images/unit_testing/2.png" alt="image">
+You can look the messages error, very clearly and specific. Lest complete the test with add an initialize method to our Martabak class that takes in a taste.</p>
+<p><img src="https://hafiztsalavin.com/img/images/unit_testing/3.png" alt="image"></p>
 <p>Cool, that pass and now the color changed to green. Its mean the code is pass from the test. And the code of implementation is:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Martabak</span>
     <span style="color:#66d9ef">attr_reader</span> <span style="color:#e6db74">:topping</span>
