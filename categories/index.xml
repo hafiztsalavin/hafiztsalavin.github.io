@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Hafiz Tsalavin</title>
-    <link>https://hafiztsalavin.github.io/categories/</link>
+    <link>https://hafiztsalavin.com/categories/</link>
     <description>Recent content in Categories on Hafiz Tsalavin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://hafiztsalavin.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hafiztsalavin.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Development</title>
-      <link>https://hafiztsalavin.github.io/categories/development/</link>
+      <link>https://hafiztsalavin.com/categories/development/</link>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hafiztsalavin.github.io/categories/development/</guid>
+      <guid>https://hafiztsalavin.com/categories/development/</guid>
       <description></description>
     </item>
     
