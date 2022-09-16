@@ -5,8 +5,41 @@
         <description>Recent content in Posts on Hafiz Tsalavin</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 08 Feb 2022 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 18 Aug 2022 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://hafiztsalavin.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Kargo Hackathon 2.0 : My First (virtual) Hackathon</title>
+            <link>https://hafiztsalavin.com/posts/2022/08/kargo-hackathon-2.0-my-first-virtual-hackathon/</link>
+            <pubDate>Thu, 18 Aug 2022 00:00:00 +0000</pubDate>
+            
+            <guid>https://hafiztsalavin.com/posts/2022/08/kargo-hackathon-2.0-my-first-virtual-hackathon/</guid>
+            <description>Hello everyone ! Hello everyone! Really happy back to write some article again.
+Have you ever heard a hackathon? Basically, hackathon is an event that usually hosted by tech company or organization, where the organizer challenged the participants get together to come up with the ideas or solutions for crack or solve the problems by making innovative products within a short period of time. Look like challenging isn&amp;rsquo;t it?
+One week ago, i have been selected to participated in Kargo Hackathon.</description>
+            <content type="html"><![CDATA[<h3 id="hello-everyone-">Hello everyone !</h3>
+<p>Hello everyone! Really happy back to write some article again.</p>
+<p>Have you ever heard a hackathon?
+Basically, hackathon is an event that usually hosted by tech company or organization, where the organizer challenged the participants get together to come up with the ideas or solutions for crack or solve the problems by making innovative products within a short period of time. Look like challenging isn&rsquo;t it?</p>
+<p>One week ago, i have been selected to participated in Kargo Hackathon. Before that, I never participated in any kind of hackathon, either offline or online. So, you can imagine that I have zero experience in this thing.</p>
+<p>When I saw this event through a Kargo Linkedin post, I signed up immediately as an individual and one week letter I received an email test for a coding test through hackerrank platform. And less than 2 weeks I received a message that i was selected to one of the participants in the Kargo Hackathon, really exciting. But, in the others things, I don&rsquo;t know anyone who has participated in a hackathon and I don’t know who my teammates are. Makes me more excited but worried at the same time.</p>
+<p>Actually, this event will be conducted in online and offline or hybrid. I chose online considering my place with the event is kinda to far to attend offline.</p>
+<p>So many reasons people came to participate in Kargo Hackathon, for me it was about opportunity to exploring new things in the area that I&rsquo;m interested in, get out from my comfort zone, experiment with new technologies and obviously I can do have fun.</p>
+<p>One week before the event, look. What’s they sent to me, some cool swag for a dress code during the event. Thanks kargo, adding some other cool swag from tech event in my collections.</p>
+<p><img src="https://hafiztsalavin.com/img/images/swag.jpg" alt="image "></p>
+<p>3 day before the events, teammates for hackathon is announced. We all gathered in one group WhatsApp and our team consisted of 6 member was born. All member teams introduce themselves and skill set that they have with warmly. My team members are mostly use Javascript for programming language so we decided to use javaScript for main programming language that we will use for tomorrow, either Backend or Frontend. Only me that not familiar using JavaScript, usually I use golang or ruby for backend. But ya this time to learn something new. There is one member not introduced anymore until the event, so our team only has 5 members in the day events, 3 main power for backend and 2 main power for frontend, we decided to not use QA because we assume that we can test during development process.</p>
+<p>The days come, started from opening session around 9 AM to explained rules of competition and after all, we move into breakout room for every team. At 10 AM the hackathon started. Every team given a mentor or judge that will be service to help and guide during the entire event. We are so grateful to have mentor Mas Thoha, he explained the problem statement really clearly. Not only that, during the event he always gave us various advice to explore the problem statement and make sure that we did in the right path.
+After brainstorming session, it was time to implement the solution. We all in backend discuss the right design system and databases to implement the solution and than my partner Alfarizi and I make some contract for the API that we will develop and other teammates build some blueprint and repository. Around 11.30 AM we all started process development.</p>
+<p>But, some unexpected things happened in the mid day. The electricity house in one of member is out. He cannot continuing the development process and only 1 man power in the front end. So sad. But ya we have to continuing the process right.</p>
+<p>In the Backend team, we use express js. For sure, i am not familiar with the express js and only take 3 task out of 11 task in backend team. The development process was definitely not a smooth, there is some miscommunication but the team made it through.</p>
+<p>The development process ended around 4.30, we in backend team actually finished all task in 4 pm and only finishing in the several API and make sure all API that we provided for front end is delivered. But in the front end side, due to only 1 manpower, he is only completed half of the task in the front end. Even with 1 manpower, he is still great considering he is solo player in the front end.</p>
+<p>We started our presentation in 7 am with live demo and showed the features but unfortunately because we have lack manpower between in backend and front end, we cannot finished all the full features that provided by front end and only showed API that we already done.</p>
+<h3 id="i-enjoyed-my-first-hackathon">I enjoyed my first hackathon!</h3>
+<p>I was really impressed by everyone in the team. Collaboration with strangers and how we would develop, discuss and implement the product. As a first timer, I have got a lot of things to learn.</p>
+<p>Before that, i had many preconceptions about hackathon that every one who has participate would be an expert. No one can sleep during the event and bla bla bla. But, my preconceptions about hackathon already down. Hackathon is fun, meet new people even though meet people in virtually cannot replace meet people face-to-face. You definitely should to participate.</p>
+<p>Thank you!</p>
+]]></content>
+        </item>
         
         <item>
             <title>Story of My Internship  </title>
